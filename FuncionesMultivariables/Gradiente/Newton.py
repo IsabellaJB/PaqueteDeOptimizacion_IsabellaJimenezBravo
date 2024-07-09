@@ -69,6 +69,23 @@ def distancia_origen(vector):
 
 # ---------------------------------- MÉTODO DE NEWTON MODIFICADO ---------------------------------- 
 def newton(funcion_objetivo, x0, metodo_busqueda, epsilon1=1e-6, epsilon2=1e-6, max_iterations=100):
+    """
+    Implementa el método de Newton modificado para la optimización de funciones.
+    El Método de Newton es un algoritmo de optimización que busca encontrar 
+    raíces de funciones o mínimos de funciones derivadas.
+
+    Parameters:
+    funcion_objetivo (callable): Función objetivo a minimizar.
+    x0 (list): Punto inicial de búsqueda.
+    metodo_busqueda (callable): Método de búsqueda para calcular el paso alpha.
+    epsilon1 (float): Tolerancia para la norma del gradiente. Default es 1e-6.
+    epsilon2 (float): Tolerancia para la diferencia relativa entre iteraciones sucesivas. Default es 1e-6.
+    max_iterations (int): Número máximo de iteraciones permitidas. Default es 100.
+
+    Returns:
+    ndarray: Punto óptimo encontrado.
+    """
+
     terminar = False
     xk = np.array(x0, dtype=float)
     k = 0
