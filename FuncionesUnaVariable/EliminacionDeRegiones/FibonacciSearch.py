@@ -1,60 +1,48 @@
 import numpy as np
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
+def fibonacci_search(funcion, epsilon, a, b):
+    fibs = [0, 1]
+    while (b - a) / fibs[-1] > epsilon:
+        fibs.append(fibs[-1] + fibs[-2])
 
-def minimo(a, b):
-    if a < b:
-        return a
-    else:
-        return b
+    n = len(fibs) - 1
+    k = n - 1
 
-
-
-def fibonacci(n):
-    if n <= 1:
-        return n
-    else:
-        a, b = 0, 1
-        for _ in range(2, n + 1):
-            a, b = b, a + b
-        return b
-
-
-
-def fibonacciSearch(x, funcion):
-    a = x[0]
-    b = x[-1]
-
-    L = b - a
-
-    n = 7
-    k = 2
-
-    bandera = 0
-
-    # paso 2
-    while (bandera != 1):
-        i = n - k + 2
-        Fi = fibonacci(i)
-        j = n + 2
-        Fj = fibonacci(j)
-        L_K = (Fi/Fj) * L
-        x1 = a + L_K
-        x2 = b - L_K
-        funcionX1 = funcion(x1)
-        funcionX2 = funcion(x2)
-        if funcionX1 > funcionX2:
+    x1 = a + fibs[k-1] / fibs[k] * (b - a)
+    x2 = a + fibs[k] / fibs[k+1] * (b - a)
+    f1 = funcion(x1)
+    f2 = funcion(x2)
+    
+    while k > 1:
+        if f1 > f2:
             a = x1
-        elif funcionX1 < funcionX2:
-            b = x2
-        elif funcionX1 == funcionX2:
-            a = x1
-            b = x2
-        if k == n:
-            bandera = 1
+            x1 = x2
+            f1 = f2
+            x2 = a + fibs[k-1] / fibs[k] * (b - a)
+            f2 = funcion(x2)
         else:
-            k += 1
+            b = x2
+            x2 = x1
+            f2 = f1
+            x1 = a + fibs[k-2] / fibs[k-1] * (b - a)
+            f1 = funcion(x1)
+        k -= 1
 
-    return a,b
+    if f1 < f2:
+        return x1
+    else:
+        return x2
+    
 
+
+def sample_function(x):
+    return x**2 + 54/x
+
+# Set the interval and error tolerance
+a = 0
+b = 5
+tolerance = 1e-5
+
+# Find the minimum
+minimum = fibonacci_search(sample_function, tolerance, a, b)
+print("Estimated minimum at x =", minimum)
