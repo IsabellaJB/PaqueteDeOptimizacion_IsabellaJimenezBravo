@@ -1,6 +1,19 @@
 import numpy as np
 
 def fibonacci_search(funcion, epsilon, a, b):
+    """
+    Implementación del método de búsqueda utilizando la secuencia de Fibonacci para minimización de funciones.
+
+    Parameters:
+    funcion (callable): Función objetivo que se desea minimizar.
+    epsilon (float): Precisión deseada para la aproximación del mínimo.
+    a (float): Límite inferior del intervalo de búsqueda.
+    b (float): Límite superior del intervalo de búsqueda.
+
+    Returns:
+    float: Punto donde se estima que se encuentra el mínimo de la función.
+    """
+    
     fibs = [0, 1]
     while (b - a) / fibs[-1] > epsilon:
         fibs.append(fibs[-1] + fibs[-2])
@@ -35,14 +48,4 @@ def fibonacci_search(funcion, epsilon, a, b):
     
 
 
-def sample_function(x):
-    return x**2 + 54/x
 
-# Set the interval and error tolerance
-a = 0
-b = 5
-tolerance = 1e-5
-
-# Find the minimum
-minimum = fibonacci_search(sample_function, tolerance, a, b)
-print("Estimated minimum at x =", minimum)

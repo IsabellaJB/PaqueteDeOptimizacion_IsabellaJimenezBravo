@@ -20,6 +20,21 @@ def segunda_derivada(x, funcion):
     return parte_final
 
 def newton_raphson(x, funcion, epsilon):
+    """
+    Implementa el método de Newton-Raphson para encontrar una raíz de la función dada.
+    El método de Newton-Raphson es un algoritmo iterativo utilizado para encontrar 
+    numéricamente las raíces de una función mediante la aproximación sucesiva de 
+    un punto inicial hacia la raíz, basándose en la derivada de la función. 
+
+    Parameters:
+    x (float): Punto inicial de búsqueda.
+    funcion (callable): Función objetivo para la cual se busca la raíz.
+    epsilon (float): Tolerancia de convergencia del método.
+
+    Returns:
+    float: Valor aproximado de la raíz de la función.
+    """
+
     k = 0
     x_actual = x[k]
     x_derivada1 = primera_derivada(x_actual, funcion)

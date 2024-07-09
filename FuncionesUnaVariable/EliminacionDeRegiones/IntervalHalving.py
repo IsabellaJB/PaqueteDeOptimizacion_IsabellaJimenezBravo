@@ -2,6 +2,17 @@ import numpy as np
 
 
 def interval_method(x, error, function):
+    """
+    Implementación del método del intervalo para minimización de funciones.
+
+    Parameters:
+    x (list or tuple): Intervalo inicial [a, b] donde se busca el mínimo.
+    error (float): Precisión deseada para la aproximación del mínimo.
+    function (callable): Función objetivo que se desea minimizar.
+
+    Returns:
+    float: Punto donde se estima que se encuentra el mínimo de la función dentro del intervalo [a, b].
+    """
     a = x[0]
     b = x[-1]
     Xm = (a + b) / 2

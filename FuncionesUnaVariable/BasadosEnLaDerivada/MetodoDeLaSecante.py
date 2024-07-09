@@ -38,6 +38,23 @@ def z(x1, x2, funcion):
 
 
 def metodo_secante(x_inicial, funcion, epsilon, iter_max=100):
+    """
+    Encuentra una raíz de una función no lineal usando el método de la secante.
+    El método de la secante es un algoritmo numérico iterativo para encontrar 
+    las raíces de una función no lineal. A diferencia del método de Newton-Raphson, 
+    no requiere la evaluación de la derivada de la función en cada paso, haciendo 
+    el cálculo de la derivada menos crítico. 
+
+    Parameters:
+    x_inicial (tuple): Tupla con los dos puntos iniciales para comenzar el método.
+    funcion (callable): Función objetivo.
+    epsilon (float): Tolerancia para la convergencia del método.
+    iter_max (int, optional): Número máximo de iteraciones permitidas. Default es 100.
+
+    Returns:
+    float: Aproximación de la raíz encontrada.
+    """
+
     x1 = x_inicial[0]
     x2 = x_inicial[1]
     

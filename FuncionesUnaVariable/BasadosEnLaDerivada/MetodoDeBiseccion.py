@@ -21,6 +21,23 @@ def segunda_derivada(x, funcion):
     return parte_final
 
 def metodo_biseccion(x, funcion, epsilon):
+    """
+    Encuentra una raíz de una función usando el método de bisección.
+    El método de bisección es un algoritmo numérico para encontrar 
+    raíces de una función en un intervalo dado. Funciona dividiendo 
+    repetidamente el intervalo por la mitad y seleccionando el subintervalo 
+    donde la raíz probablemente se encuentra, hasta que el intervalo sea lo 
+    suficientemente pequeño o se alcance una precisión especificada.
+
+    Parameters:
+    x (tuple): Intervalo inicial [a, b] donde se busca la raíz.
+    funcion (callable): Función objetivo.
+    epsilon (float): Tolerancia para la convergencia del método.
+
+    Returns:
+    float: Aproximación de la raíz encontrada.
+    """
+
     a_original = x[0]
     b_original = x[-1]
 

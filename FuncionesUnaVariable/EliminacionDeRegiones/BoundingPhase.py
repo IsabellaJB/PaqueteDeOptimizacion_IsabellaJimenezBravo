@@ -6,6 +6,17 @@ def deltas(a, b, n):
     return ((b - a) / n)
 
 def busqueda_exhaustiva(x, funcion, precision):
+    """
+    Realiza una búsqueda exhaustiva para encontrar el mínimo de una función en un intervalo dado.
+
+    Parameters:
+    x (list): Lista que contiene los límites del intervalo [a, b].
+    funcion (callable): Función objetivo que se desea minimizar.
+    precision (float): Precisión deseada para la aproximación del mínimo.
+
+    Returns:
+    float: Punto en el intervalo [a, b] donde se estima que se encuentra el mínimo de la función.
+    """
     a = x[0]
     b = x[-1]
     n = int((2 * (b - a)) / precision)

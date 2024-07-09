@@ -2,6 +2,17 @@ import numpy as np
 
 
 def metodo_fase(punto_inicial, delta, funcion):
+    """
+    Implementación del método de la fase para minimización de funciones.
+
+    Parameters:
+    punto_inicial (float): Punto inicial para iniciar la búsqueda.
+    delta (float): Tamaño del paso inicial para la búsqueda.
+    funcion (callable): Función objetivo que se desea minimizar.
+
+    Returns:
+    float: Punto donde se estima que se encuentra el mínimo de la función.
+    """
     k = 0
 
     x1 = punto_inicial - abs(delta)

@@ -11,6 +11,18 @@ def w_to_x(w, a, b):
     return w * (b - a) + a
 
 def busqueda_dorada(funcion, epsilon, a, b):
+    """
+    Implementación del método de búsqueda por la razón áurea (Golden Section Search) para minimización de funciones.
+
+    Parameters:
+    funcion (callable): Función objetivo que se desea minimizar.
+    epsilon (float): Precisión deseada para la aproximación del mínimo.
+    a (float): Límite inferior del intervalo de búsqueda.
+    b (float): Límite superior del intervalo de búsqueda.
+
+    Returns:
+    float: Punto donde se estima que se encuentra el mínimo de la función.
+    """
     PHI = (1 + math.sqrt(5)) / 2 - 1
     aw, bw = 0, 1
     Lw = 1
