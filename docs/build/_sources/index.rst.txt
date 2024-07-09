@@ -15,14 +15,15 @@ Bienvenidos a la documentación del paquete: PaqueteDeOptimizacion_IsabellaJimen
    :maxdepth: 2
    :caption: Contenido:
 
-   FuncionesMultivariables/index
-   FuncionesUnaVariable/index
+   FuncionesMultivariables
+   FuncionesUnaVariable
    module1
+   module2
 
 Introducción
 -------
 
-Bienvenidos a la documentación oficial del paquete **PaqueteDeOptimizacion_IsabellaJimenezBravo**. Este paquete ha sido desarrollado para proporcionar una colección completa de funciones de optimización tanto para problemas de una variable como de múltiples variables.
+Bienvenidos a la documentación oficial del paquete **PaqueteDeOptimizacion_IsabellaJimenezBravo**. Este paquete ha sido desarrollado para proporcionar una colección de funciones de optimización tanto para problemas de una variable como de múltiples variables.
 
 Estructura del Paquete
 -------
@@ -33,22 +34,23 @@ Este paquete está organizado en dos módulos principales:
    
    - **Directos**: Métodos que no requieren derivadas.
    - **Gradiente**: Métodos que utilizan gradientes para encontrar óptimos.
-   - **Basados en la Derivada**: Métodos que utilizan derivadas de la función objetivo.
-   - **Eliminación de Regiones**: Métodos que reducen el espacio de búsqueda iterativamente.
 
 2. **FuncionesUnaVariable**: Contiene métodos de optimización para problemas de una sola variable.
 
-   - **Directos**: Métodos que no requieren derivadas.
-   - **Gradiente**: Métodos que utilizan gradientes para encontrar óptimos.
    - **Basados en la Derivada**: Métodos que utilizan derivadas de la función objetivo.
    - **Eliminación de Regiones**: Métodos que reducen el espacio de búsqueda iterativamente.
 
 
-Cada módulo está subdividido en métodos directos, basados en gradientes, basados en derivadas y métodos de eliminación de regiones.
 
 Instalación
 -------
 
 Para instalar el paquete, puedes usar el siguiente comando:
+
+``pip install -i https://test.pypi.org/simple/ primer-paquete-ux-isa-3``
+
+Link de donde obtener más información del paquete: 
+https://test.pypi.org/project/primer-paquete-ux-isa-3/
+
 
 
