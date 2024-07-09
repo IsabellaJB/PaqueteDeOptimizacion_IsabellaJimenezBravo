@@ -26,6 +26,24 @@ def gradiente(funcion, x, delta=0.001):
 
 # ------------------------------------ GRADIENTE CONJUGADO ------------------------------------ 
 def gradiente_conjugado(f_o, x0, metodo_busqueda, e1=1e-6, e2=1e-6, e3=1e-6):
+    """
+    Implementa el método del Gradiente Conjugado para la optimización de funciones.
+    El método del gradiente conjugado utiliza tanto la información del gradiente en 
+    la iteración actual como la de iteraciones previas para calcular la dirección de 
+    búsqueda siguiente.
+
+    Parameters:
+    f_o (callable): La función objetivo a minimizar.
+    x0 (ndarray): Punto inicial de búsqueda.
+    metodo_busqueda (callable): Método de búsqueda para calcular el paso alpha.
+    e1 (float): Tolerancia para la búsqueda de línea. Default es 1e-6.
+    e2 (float): Tolerancia para la condición de convergencia basada en la diferencia relativa. Default es 1e-6.
+    e3 (float): Tolerancia para la condición de convergencia basada en la norma del gradiente. Default es 1e-6.
+
+    Returns:
+    ndarray: Punto óptimo encontrado.
+    """
+
     x = x0
     grad = gradiente(f_o, x)
     s = -grad

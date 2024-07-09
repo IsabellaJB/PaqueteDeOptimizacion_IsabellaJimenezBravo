@@ -1,6 +1,25 @@
 import numpy as np
 
 def nelder_mead(f, x_start, gamma, beta, alpha, tol=1e-5, max_iter=1000):
+    """
+    Implementa el método Nelder-Mead para la optimización de funciones sin derivadas.
+    Este método es efectivo para optimización de funciones no lineales sin necesidad 
+    de derivadas, utilizando operaciones simples como reflexiones, expansiones y 
+    contracciones en un simplex que se adapta dinámicamente durante las iteraciones.
+
+    Parameters:
+    f (callable): La función objetivo a minimizar.
+    x_start (ndarray): El punto inicial de la búsqueda.
+    gamma (float): Parámetro gamma para la reflexión.
+    beta (float): Parámetro beta para la contracción.
+    alpha (float): Parámetro alpha para la expansión.
+    tol (float): Tolerancia de convergencia. Default es 1e-5.
+    max_iter (int): Número máximo de iteraciones. Default es 1000.
+
+    Returns:
+    ndarray: El punto óptimo encontrado.
+    """
+
     N = len(x_start)
 
     def create_initial_simplex(x0, alpha=1.0):
