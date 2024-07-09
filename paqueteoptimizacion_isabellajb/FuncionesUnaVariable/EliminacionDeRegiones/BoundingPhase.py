@@ -1,6 +1,11 @@
+"""
+Bounding Phase Method
+---------------------
+Este módulo contiene la implementación del método de fases de acotamiento
+para la optimización de funciones unimodales.
+"""
+
 import numpy as np
-
-
 
 def deltas(a, b, n):
     return ((b - a) / n)

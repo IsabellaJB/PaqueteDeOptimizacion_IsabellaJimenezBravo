@@ -5,16 +5,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Bienvenidos a la documentación del paquete: PaqueteDeOptimizacion_IsabellaJimenezBravo &#8212; documentación de PaqueteDeOptimizacion_IsabellaJimenezBravo - 08/07/2024</title>
+    <title>Bienvenidos a la documentación del paquete: PaqueteDeOptimizacion_IsabellaJimenezBravo &#8212; documentación de Paquete de Optimización Isabella Jiménez Bravo - 1.0</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/nature.css?v=0f882399" />
-    <script src="_static/documentation_options.js?v=d4cfbceb"></script>
+    <script src="_static/documentation_options.js?v=4936afed"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/translations.js?v=efdbd0b9"></script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Uso del Paquete" href="module1.html" /> 
+    <link rel="next" title="FuncionesMultivariables package" href="FuncionesMultivariables.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navegación</h3>
@@ -23,9 +23,9 @@
           <a href="genindex.html" title="Índice General"
              accesskey="I">índice</a></li>
         <li class="right" >
-          <a href="module1.html" title="Uso del Paquete"
+          <a href="FuncionesMultivariables.html" title="FuncionesMultivariables package"
              accesskey="N">siguiente</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">documentación de PaqueteDeOptimizacion_IsabellaJimenezBravo - 08/07/2024</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="#">documentación de Paquete de Optimización Isabella Jiménez Bravo - 1.0</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Bienvenidos a la documentación del paquete: PaqueteDeOptimizacion_IsabellaJimenezBravo</a></li> 
       </ul>
     </div>  
@@ -38,17 +38,21 @@
   <section id="bienvenidos-a-la-documentacion-del-paquete-paquetedeoptimizacion-isabellajimenezbravo">
 <h1>Bienvenidos a la documentación del paquete: PaqueteDeOptimizacion_IsabellaJimenezBravo<a class="headerlink" href="#bienvenidos-a-la-documentacion-del-paquete-paquetedeoptimizacion-isabellajimenezbravo" title="Link to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Contenido:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="module1.html">Uso del Paquete</a></li>
-<li class="toctree-l1"><a class="reference internal" href="module2.html">Soporte y Contribuciones</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="module2.html#documentacion-de-referencia">Documentación de Referencia</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="FuncionesMultivariables.html">FuncionesMultivariables package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FuncionesUnaVariable.html">FuncionesUnaVariable package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">PaqueteDeOptimizacion_IsabellaJimenezBravo</a></li>
 </ul>
 </div>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Índice</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Índice de Módulos</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Página de Búsqueda</span></a></p></li>
+</ul>
 <section id="introduccion">
 <h2>Introducción<a class="headerlink" href="#introduccion" title="Link to this heading">¶</a></h2>
 <p>Bienvenidos a la documentación oficial del paquete <strong>PaqueteDeOptimizacion_IsabellaJimenezBravo</strong>. Este paquete ha sido desarrollado para proporcionar una colección de funciones de optimización tanto para problemas de una variable como de múltiples variables.</p>
@@ -71,6 +75,14 @@
 </li>
 </ol>
 </section>
+<section id="uso-del-paquete">
+<h2>Uso del Paquete<a class="headerlink" href="#uso-del-paquete" title="Link to this heading">¶</a></h2>
+<p>Aquí se presenta un ejemplo básico de cómo utilizar el paquete para resolver un problema de optimización:</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>python
+from PaqueteDeOptimizacion_IsabellaJimenezBravo.FuncionesUnaVariable.Directos import metodo_directo</p>
+<p>resultado = metodo_directo(funcion, intervalo)
+print(resultado)</p>
+</section>
 <section id="instalacion">
 <h2>Instalación<a class="headerlink" href="#instalacion" title="Link to this heading">¶</a></h2>
 <p>Para instalar el paquete, puedes usar el siguiente comando:</p>
@@ -90,9 +102,11 @@
   <div>
     <h3><a href="#">Tabla de contenido</a></h3>
     <ul>
-<li><a class="reference internal" href="#">Bienvenidos a la documentación del paquete: PaqueteDeOptimizacion_IsabellaJimenezBravo</a><ul>
+<li><a class="reference internal" href="#">Bienvenidos a la documentación del paquete: PaqueteDeOptimizacion_IsabellaJimenezBravo</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a><ul>
 <li><a class="reference internal" href="#introduccion">Introducción</a></li>
 <li><a class="reference internal" href="#estructura-del-paquete">Estructura del Paquete</a></li>
+<li><a class="reference internal" href="#uso-del-paquete">Uso del Paquete</a></li>
 <li><a class="reference internal" href="#instalacion">Instalación</a></li>
 </ul>
 </li>
@@ -101,8 +115,8 @@
   </div>
   <div>
     <h4>Próximo tema</h4>
-    <p class="topless"><a href="module1.html"
-                          title="próximo capítulo">Uso del Paquete</a></p>
+    <p class="topless"><a href="FuncionesMultivariables.html"
+                          title="próximo capítulo">FuncionesMultivariables package</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>Esta página</h3>
@@ -132,14 +146,14 @@
           <a href="genindex.html" title="Índice General"
              >índice</a></li>
         <li class="right" >
-          <a href="module1.html" title="Uso del Paquete"
+          <a href="FuncionesMultivariables.html" title="FuncionesMultivariables package"
              >siguiente</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">documentación de PaqueteDeOptimizacion_IsabellaJimenezBravo - 08/07/2024</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="#">documentación de Paquete de Optimización Isabella Jiménez Bravo - 1.0</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Bienvenidos a la documentación del paquete: PaqueteDeOptimizacion_IsabellaJimenezBravo</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-    &#169; Copyright 2024, Isabella Jimenez Bravo.
+    &#169; Copyright .
       Creado usando <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     </div>
   </body>

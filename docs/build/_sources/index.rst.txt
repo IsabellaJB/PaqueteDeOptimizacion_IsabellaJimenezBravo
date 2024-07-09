@@ -11,14 +11,32 @@
 Bienvenidos a la documentación del paquete: PaqueteDeOptimizacion_IsabellaJimenezBravo
 ======================================================================================
 
+
+..    :maxdepth: 2
+..    :caption: Contenido:
+
+..    FuncionesMultivariables
+..    FuncionesUnaVariable
+..    module1
+..    module2
+..    Funciones
+
+
 .. toctree::
-   :maxdepth: 2
-   :caption: Contenido:
+   :maxdepth: 1
+   :caption: Contents:
 
    FuncionesMultivariables
    FuncionesUnaVariable
-   module1
-   module2
+   modules
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
 
 Introducción
 -------
@@ -39,6 +57,19 @@ Este paquete está organizado en dos módulos principales:
 
    - **Basados en la Derivada**: Métodos que utilizan derivadas de la función objetivo.
    - **Eliminación de Regiones**: Métodos que reducen el espacio de búsqueda iterativamente.
+
+
+Uso del Paquete
+-------
+
+Aquí se presenta un ejemplo básico de cómo utilizar el paquete para resolver un problema de optimización:
+
+```python
+from PaqueteDeOptimizacion_IsabellaJimenezBravo.FuncionesUnaVariable.Directos import metodo_directo
+
+resultado = metodo_directo(funcion, intervalo)
+print(resultado)
+
 
 
 
