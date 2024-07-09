@@ -17,6 +17,15 @@ sys.path.insert(0, os.path.abspath('../../'))
 sys.path.insert(0, os.path.abspath('../../FuncionesMultivariables'))
 sys.path.insert(0, os.path.abspath('../../FuncionesUnaVariable'))
 
+# Añadir la ruta específica a FuncionesMultivariables/Directos
+sys.path.insert(0, os.path.abspath('../../FuncionesMultivariables/Directos'))
+sys.path.insert(0, os.path.abspath('../../FuncionesMultivariables/Gradiente'))
+
+# Añadir la ruta específica a FuncionesUnaVariable/BasadosEnLaDerivada
+sys.path.insert(0, os.path.abspath('../../FuncionesUnaVariable/BasadosEnLaDerivada'))
+sys.path.insert(0, os.path.abspath('../../FuncionesUnaVariable/EliminacionDeRegiones'))
+
+
 
 project = 'PaqueteDeOptimizacion_IsabellaJimenezBravo'
 copyright = '2024, Isabella Jimenez Bravo'

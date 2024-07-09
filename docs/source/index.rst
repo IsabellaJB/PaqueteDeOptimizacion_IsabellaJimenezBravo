@@ -3,15 +3,15 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Bienvenidos a la documentacion del paquete: PaqueteDeOptimizacion_IsabellaJimenezBravo !
+Bienvenidos a la documentación del paquete: PaqueteDeOptimizacion_IsabellaJimenezBravo !
 ======================================================================
 
-.. .. toctree::
-..    :maxdepth: 2
-..    :caption: Contents:
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
 
-..    FuncionesMultivariables/index
-..    FuncionesUnaVariable/index
+   FuncionesMultivariables/index
+   FuncionesUnaVariable/index
 
 .. Indices and tables
 .. ==================
