@@ -9,7 +9,13 @@
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../..'))
+
+# Añadir la ruta al directorio base del proyecto
+sys.path.insert(0, os.path.abspath('../../'))
+
+# Añadir la ruta específica a los directorios de FuncionesMultivariables y FuncionesUnaVariable
+sys.path.insert(0, os.path.abspath('../../FuncionesMultivariables'))
+sys.path.insert(0, os.path.abspath('../../FuncionesUnaVariable'))
 
 
 project = 'PaqueteDeOptimizacion_IsabellaJimenezBravo'
@@ -26,6 +32,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
     'sphinx.ext.viewcode',
+    
 ]
 
 templates_path = ['_templates']
