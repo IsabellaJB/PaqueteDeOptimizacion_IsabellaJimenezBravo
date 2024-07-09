@@ -6,7 +6,7 @@ LONG_DESCRIPTION = 'Paquete de Optimizacion de Python que contiene métodos de f
 
 # Configurando
 setup(
-    name="paquete_optimizacion_proyecto_isabellajb",  
+    name="paquete-optimizacion-proyecto-isabellajb",  
     version=VERSION,
     author="IsabellaJB",
     author_email="isabellajib5@gmail.com",  # Corregido: sin < y >
