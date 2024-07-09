@@ -6,16 +6,18 @@
 Bienvenidos a la documentacion del paquete: PaqueteDeOptimizacion_IsabellaJimenezBravo !
 ======================================================================
 
+.. .. toctree::
+..    :maxdepth: 2
+..    :caption: Contents:
+
+..    FuncionesMultivariables/index
+..    FuncionesUnaVariable/index
+
+.. Indices and tables
+.. ==================
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   FuncionesMultivariables/index
-   FuncionesUnaVariable/index
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   modules

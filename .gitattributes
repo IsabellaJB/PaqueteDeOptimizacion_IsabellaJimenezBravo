@@ -1,2 +1,19 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Explicitly set LF for shell scripts and Python files
+*.sh text eol=lf
+*.py text eol=lf
+
+# Set binary files to be treated as binary and not normalized
+*.jpg binary
+*.png binary
+*.pdf binary
+
+# Handle markdown and documentation files
+*.md text eol=lf
+*.rst text eol=lf
+
+# Ignore certain configuration files or directories
+# .env export-ignore
+# /docs/build export-ignore

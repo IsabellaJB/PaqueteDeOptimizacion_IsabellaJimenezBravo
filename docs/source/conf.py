@@ -5,6 +5,12 @@
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+# docs/source/conf.py
+
+import os
+import sys
+sys.path.insert(0, os.path.abspath('../..'))
+
 
 project = 'PaqueteDeOptimizacion_IsabellaJimenezBravo'
 copyright = '2024, Isabella Jimenez Bravo'
@@ -14,7 +20,13 @@ release = '08/07/2024'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+# docs/source/conf.py
+
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.napoleon',
+    'sphinx.ext.viewcode',
+]
 
 templates_path = ['_templates']
 exclude_patterns = []
