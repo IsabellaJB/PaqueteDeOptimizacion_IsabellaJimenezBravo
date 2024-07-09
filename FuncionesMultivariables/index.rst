@@ -2,11 +2,8 @@ Funciones Multivariables
 ========================
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
+   :caption: Contents:
 
-   Directos/CaminataAleatoria
-   Directos/HookeJeeves
-   Directos/NelderMeadSimplex
-   Gradiente/Cauchy
-   Gradiente/FletcherReeves
-   Gradiente/Newton
+   Directos/index
+   Gradiente/index

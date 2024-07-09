@@ -2,13 +2,8 @@ Funciones Una Variable
 ======================
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
+   :caption: Contents:
 
-   BasadosEnLaDerivada/MetodoDeBiseccion
-   BasadosEnLaDerivada/MetodoDeLaSecante
-   BasadosEnLaDerivada/NewtonRaphson
-   EliminacionDeRegiones/BusquedaExhaustiva
-   EliminacionDeRegiones/FibonacciSearch
-   EliminacionDeRegiones/GoldenSectionSearch
-   EliminacionDeRegiones/IntervalHalving
-   EliminacionDeRegiones/BoundingPhase
+   BasadosEnLaDerivada/index
+   EliminacionDeRegiones/index
