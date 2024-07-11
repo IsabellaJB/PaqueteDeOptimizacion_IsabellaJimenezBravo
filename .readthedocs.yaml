@@ -17,10 +17,8 @@ sphinx:
 # Opcionalmente construye tus documentos en otros formatos como PDF y ePub
 formats:
   - pdf
-  - epub
 
 # Declara las dependencias de Python necesarias para construir tu documentación
 # python:
 #   install:
 #     - requirements: requirements.txt  # Ajusta si tienes un archivo requirements.txt
-output-html-path: $READTHEDOCS_OUTPUT/html
