@@ -13,7 +13,7 @@ build:
 
 # Configuración para generar documentación en el directorio "docs/" con Sphinx
 sphinx:
-  builder: html
+  builder: _build\html
   configuration: conf.py
   fail_on_warning: true
 
