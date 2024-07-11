@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FuncionesMultivariables.Directos package &mdash; documentación de Proyecto de optimización - 0.0.1</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=6fcc102b"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/translations.js?v=efdbd0b9"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Proyecto de optimización
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">FuncionesMultivariables.Directos package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-FuncionesMultivariables.Directos.CaminataAleatoria">FuncionesMultivariables.Directos.CaminataAleatoria module</a><ul>
+<li><a class="reference internal" href="#FuncionesMultivariables.Directos.CaminataAleatoria.caminata_aleatoria"><code class="docutils literal notranslate"><span class="pre">caminata_aleatoria()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-FuncionesMultivariables.Directos.HookeJeeves">FuncionesMultivariables.Directos.HookeJeeves module</a><ul>
+<li><a class="reference internal" href="#FuncionesMultivariables.Directos.HookeJeeves.exploratory_move"><code class="docutils literal notranslate"><span class="pre">exploratory_move()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesMultivariables.Directos.HookeJeeves.hooke_jeeves"><code class="docutils literal notranslate"><span class="pre">hooke_jeeves()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesMultivariables.Directos.HookeJeeves.pattern_move"><code class="docutils literal notranslate"><span class="pre">pattern_move()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-FuncionesMultivariables.Directos.NelderMeadSimplex">FuncionesMultivariables.Directos.NelderMeadSimplex module</a><ul>
+<li><a class="reference internal" href="#FuncionesMultivariables.Directos.NelderMeadSimplex.nelder_mead"><code class="docutils literal notranslate"><span class="pre">nelder_mead()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-FuncionesMultivariables.Directos">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Proyecto de optimización</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">FuncionesMultivariables.Directos package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/rst/FuncionesMultivariables.Directos.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="funcionesmultivariables-directos-package">
+<h1>FuncionesMultivariables.Directos package<a class="headerlink" href="#funcionesmultivariables-directos-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-FuncionesMultivariables.Directos.CaminataAleatoria">
+<span id="funcionesmultivariables-directos-caminataaleatoria-module"></span><h2>FuncionesMultivariables.Directos.CaminataAleatoria module<a class="headerlink" href="#module-FuncionesMultivariables.Directos.CaminataAleatoria" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesMultivariables.Directos.CaminataAleatoria.caminata_aleatoria">
+<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Directos.CaminataAleatoria.</span></span><span class="sig-name descname"><span class="pre">caminata_aleatoria</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">paso</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iteraciones</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Directos/CaminataAleatoria.html#caminata_aleatoria"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Directos.CaminataAleatoria.caminata_aleatoria" title="Link to this definition"></a></dt>
+<dd><p>Realiza una búsqueda de optimización usando el método de Caminata Aleatoria.
+La caminata aleatoria es un proceso donde el punto se mueve paso a paso en direcciones
+aleatorias dentro de un espacio, un plano o un espacio de mayor dimensión. Cada paso en
+este proceso es independiente de los anteriores.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">paso</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">caminata_aleatoria</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">paso</span><span class="p">)</span>
+<span class="go">array([0.0002154, 0.0005237])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>func</strong> (<em>callable</em>) – La función objetivo a minimizar.</p></li>
+<li><p><strong>x0</strong> (<em>ndarray</em>) – El punto inicial de la búsqueda.</p></li>
+<li><p><strong>iteraciones</strong> (<em>int</em><em>, </em><em>optional</em>) – El número de iteraciones de la búsqueda. Default es 1000.</p></li>
+<li><p><strong>paso</strong> (<em>float</em>) – El tamaño del paso en cada iteración. Recomendacion de 0.1.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>El punto óptimo encontrado.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p>TypeError</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-FuncionesMultivariables.Directos.HookeJeeves">
+<span id="funcionesmultivariables-directos-hookejeeves-module"></span><h2>FuncionesMultivariables.Directos.HookeJeeves module<a class="headerlink" href="#module-FuncionesMultivariables.Directos.HookeJeeves" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesMultivariables.Directos.HookeJeeves.exploratory_move">
+<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Directos.HookeJeeves.</span></span><span class="sig-name descname"><span class="pre">exploratory_move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deltas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objective_function</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Directos/HookeJeeves.html#exploratory_move"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Directos.HookeJeeves.exploratory_move" title="Link to this definition"></a></dt>
+<dd><p>Realiza un movimiento exploratorio en el espacio de búsqueda.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">objective_function</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">xi</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">deltas</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">exploratory_move</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">deltas</span><span class="p">,</span> <span class="n">objective_function</span><span class="p">)</span>
+<span class="go">[1, 0]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>list</em>) – El punto actual.</p></li>
+<li><p><strong>deltas</strong> (<em>list</em>) – Los tamaños de paso para cada dimensión.</p></li>
+<li><p><strong>objective_function</strong> (<em>callable</em>) – La función objetivo a minimizar.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>El mejor punto encontrado durante la exploración.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesMultivariables.Directos.HookeJeeves.hooke_jeeves">
+<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Directos.HookeJeeves.</span></span><span class="sig-name descname"><span class="pre">hooke_jeeves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deltas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objective_function</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Directos/HookeJeeves.html#hooke_jeeves"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Directos.HookeJeeves.hooke_jeeves" title="Link to this definition"></a></dt>
+<dd><p>Realiza la optimización usando el método de Hooke y Jeeves. El método de
+Hooke-Jeeves es un algoritmo de optimización directa utilizado para encontrar
+el mínimo de una función objetivo sin necesidad de derivadas.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">objective_function</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">xi</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">deltas</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">alpha</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">epsilon</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">hooke_jeeves</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">deltas</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">epsilon</span><span class="p">,</span> <span class="n">objective_function</span><span class="p">)</span>
+<span class="go">[0, 0]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x0</strong> (<em>list</em>) – El punto inicial de la búsqueda.</p></li>
+<li><p><strong>deltas</strong> (<em>list</em>) – Los tamaños de paso iniciales para cada dimensión.</p></li>
+<li><p><strong>alpha</strong> (<em>float</em>) – El factor de reducción para los tamaños de paso.</p></li>
+<li><p><strong>epsilon</strong> (<em>float</em>) – La tolerancia para la convergencia.</p></li>
+<li><p><strong>objective_function</strong> (<em>callable</em>) – La función objetivo a minimizar.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>El punto óptimo encontrado.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesMultivariables.Directos.HookeJeeves.pattern_move">
+<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Directos.HookeJeeves.</span></span><span class="sig-name descname"><span class="pre">pattern_move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xk</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xk_1</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Directos/HookeJeeves.html#pattern_move"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Directos.HookeJeeves.pattern_move" title="Link to this definition"></a></dt>
+<dd><p>Realiza un movimiento de patrón en el espacio de búsqueda.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xk</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">xk_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pattern_move</span><span class="p">(</span><span class="n">xk</span><span class="p">,</span> <span class="n">xk_1</span><span class="p">)</span>
+<span class="go">[2, 3]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xk</strong> (<em>list</em>) – El punto actual.</p></li>
+<li><p><strong>xk_1</strong> (<em>list</em>) – El punto anterior.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>El nuevo punto obtenido mediante el movimiento de patrón.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-FuncionesMultivariables.Directos.NelderMeadSimplex">
+<span id="funcionesmultivariables-directos-neldermeadsimplex-module"></span><h2>FuncionesMultivariables.Directos.NelderMeadSimplex module<a class="headerlink" href="#module-FuncionesMultivariables.Directos.NelderMeadSimplex" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesMultivariables.Directos.NelderMeadSimplex.nelder_mead">
+<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Directos.NelderMeadSimplex.</span></span><span class="sig-name descname"><span class="pre">nelder_mead</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Directos/NelderMeadSimplex.html#nelder_mead"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Directos.NelderMeadSimplex.nelder_mead" title="Link to this definition"></a></dt>
+<dd><p>Implementa el método Nelder-Mead para la optimización de funciones sin derivadas.
+Este método es efectivo para optimización de funciones no lineales sin necesidad
+de derivadas, utilizando operaciones simples como reflexiones, expansiones y
+contracciones en un simplex que se adapta dinámicamente durante las iteraciones.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">xi</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x_start</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">gamma</span> <span class="o">=</span> <span class="mf">2.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">beta</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nelder_mead</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x_start</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">alpha</span><span class="p">)</span>
+<span class="go">array([0., 0.])</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>f</strong> (<em>callable</em>) – La función objetivo a minimizar.</p></li>
+<li><p><strong>x_start</strong> (<em>ndarray</em>) – El punto inicial de la búsqueda.</p></li>
+<li><p><strong>gamma</strong> (<em>float</em>) – Parámetro gamma para la reflexión.</p></li>
+<li><p><strong>beta</strong> (<em>float</em>) – Parámetro beta para la contracción.</p></li>
+<li><p><strong>alpha</strong> (<em>float</em>) – Parámetro alpha para la expansión.</p></li>
+<li><p><strong>tol</strong> (<em>float</em><em>, </em><em>optional</em>) – Tolerancia de convergencia. Default es 1e-5.</p></li>
+<li><p><strong>max_iter</strong> (<em>int</em><em>, </em><em>optional</em>) – Número máximo de iteraciones. Default es 1000.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>El punto óptimo encontrado.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-FuncionesMultivariables.Directos">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-FuncionesMultivariables.Directos" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, Isabella Jimenez Bravo.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

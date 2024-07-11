@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FuncionesMultivariables.Gradiente.FletcherReeves &mdash; documentación de Proyecto de optimización - 0.0.1</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=6fcc102b"></script>
+        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../_static/translations.js?v=efdbd0b9"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Proyecto de optimización
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Proyecto de optimización</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Código de módulo</a></li>
+      <li class="breadcrumb-item active">FuncionesMultivariables.Gradiente.FletcherReeves</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Código fuente para FuncionesMultivariables.Gradiente.FletcherReeves</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+
+<span class="c1"># ---------------------------------- GRADIENTE ---------------------------------- </span>
+<div class="viewcode-block" id="gradiente">
+<a class="viewcode-back" href="../../../rst/FuncionesMultivariables.Gradiente.html#FuncionesMultivariables.Gradiente.FletcherReeves.gradiente">[documentos]</a>
+<span class="k">def</span> <span class="nf">gradiente</span><span class="p">(</span><span class="n">funcion</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">delta</span><span class="o">=</span><span class="mf">0.001</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcula el gradiente de una función en un punto dado utilizando diferencias finitas.</span>
+
+<span class="sd">    :Example:</span>
+
+<span class="sd">    &gt;&gt;&gt; def funcion(x):</span>
+<span class="sd">    ...     return sum(xi**2 for xi in x)</span>
+<span class="sd">    &gt;&gt;&gt; x = np.array([1.0, 2.0])</span>
+<span class="sd">    &gt;&gt;&gt; gradiente(funcion, x)</span>
+<span class="sd">    array([2.001, 4.001])</span>
+
+<span class="sd">    :param funcion: La función objetivo cuya derivada se desea calcular.</span>
+<span class="sd">    :type funcion: callable</span>
+<span class="sd">    :param x: El punto en el que se desea calcular el gradiente.</span>
+<span class="sd">    :type x: ndarray</span>
+<span class="sd">    :param delta: El tamaño del paso para calcular las diferencias finitas. Default es 0.001.</span>
+<span class="sd">    :type delta: float, optional</span>
+<span class="sd">    :return: El gradiente calculado en el punto dado.</span>
+<span class="sd">    :rtype: ndarray</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">derivadas</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+        <span class="n">copia</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">copia</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">delta</span>
+        <span class="n">valor1</span> <span class="o">=</span> <span class="n">funcion</span><span class="p">(</span><span class="n">copia</span><span class="p">)</span>
+        <span class="n">copia</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">delta</span>
+        <span class="n">valor2</span> <span class="o">=</span> <span class="n">funcion</span><span class="p">(</span><span class="n">copia</span><span class="p">)</span>
+        <span class="n">derivada</span> <span class="o">=</span> <span class="p">(</span><span class="n">valor1</span> <span class="o">-</span> <span class="n">valor2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">delta</span><span class="p">)</span>
+        <span class="n">derivadas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">derivada</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">derivadas</span><span class="p">)</span></div>
+
+
+
+
+
+<span class="c1"># ------------------------------------ GRADIENTE CONJUGADO ------------------------------------ </span>
+<div class="viewcode-block" id="gradiente_conjugado">
+<a class="viewcode-back" href="../../../rst/FuncionesMultivariables.Gradiente.html#FuncionesMultivariables.Gradiente.FletcherReeves.gradiente_conjugado">[documentos]</a>
+<span class="k">def</span> <span class="nf">gradiente_conjugado</span><span class="p">(</span><span class="n">f_o</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">metodo_busqueda</span><span class="p">,</span> <span class="n">e1</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">,</span> <span class="n">e2</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">,</span> <span class="n">e3</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Implementa el método del Gradiente Conjugado para la optimización de funciones.</span>
+<span class="sd">    El método del gradiente conjugado utiliza tanto la información del gradiente en </span>
+<span class="sd">    la iteración actual como la de iteraciones previas para calcular la dirección de </span>
+<span class="sd">    búsqueda siguiente.</span>
+
+<span class="sd">    :Example:</span>
+
+<span class="sd">    &gt;&gt;&gt; def f_o(x):</span>
+<span class="sd">    ...     return sum(xi**2 for xi in x)</span>
+<span class="sd">    &gt;&gt;&gt; def metodo_busqueda(alpha_funcion, e1, a, b):</span>
+<span class="sd">    ...     return 0.1  # Dummy implementation for example</span>
+<span class="sd">    &gt;&gt;&gt; x0 = np.array([1.0, 1.0])</span>
+<span class="sd">    &gt;&gt;&gt; gradiente_conjugado(f_o, x0, metodo_busqueda)</span>
+<span class="sd">    array([0., 0.])</span>
+
+<span class="sd">    :param f_o: La función objetivo a minimizar.</span>
+<span class="sd">    :type f_o: callable</span>
+<span class="sd">    :param x0: Punto inicial de búsqueda.</span>
+<span class="sd">    :type x0: ndarray</span>
+<span class="sd">    :param metodo_busqueda: Método de búsqueda para calcular el paso alpha.</span>
+<span class="sd">    :type metodo_busqueda: callable</span>
+<span class="sd">    :param e1: Tolerancia para la búsqueda de línea. Default es 1e-6.</span>
+<span class="sd">    :type e1: float, optional</span>
+<span class="sd">    :param e2: Tolerancia para la condición de convergencia basada en la diferencia relativa. Default es 1e-6.</span>
+<span class="sd">    :type e2: float, optional</span>
+<span class="sd">    :param e3: Tolerancia para la condición de convergencia basada en la norma del gradiente. Default es 1e-6.</span>
+<span class="sd">    :type e3: float, optional</span>
+<span class="sd">    :return: Punto óptimo encontrado.</span>
+<span class="sd">    :rtype: ndarray</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x0</span>
+    <span class="n">grad</span> <span class="o">=</span> <span class="n">gradiente</span><span class="p">(</span><span class="n">f_o</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="o">-</span><span class="n">grad</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="nf">line_search</span><span class="p">(</span><span class="n">f_o</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">e1</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">alpha_funcion</span><span class="p">(</span><span class="n">alpha</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">f_o</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">s</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">metodo_busqueda</span><span class="p">(</span><span class="n">alpha_funcion</span><span class="p">,</span> <span class="n">e1</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">alpha</span> <span class="o">=</span> <span class="n">line_search</span><span class="p">(</span><span class="n">f_o</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">e1</span><span class="p">)</span>
+        <span class="n">x_next</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">s</span>
+        <span class="n">grad_next</span> <span class="o">=</span> <span class="n">gradiente</span><span class="p">(</span><span class="n">f_o</span><span class="p">,</span> <span class="n">x_next</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x_next</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mf">1e-8</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">e2</span> <span class="ow">or</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">grad_next</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">e3</span><span class="p">:</span>
+            <span class="k">break</span>
+
+        <span class="n">beta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">grad_next</span><span class="p">,</span> <span class="n">grad_next</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">grad</span><span class="p">,</span> <span class="n">grad</span><span class="p">)</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="o">-</span><span class="n">grad_next</span> <span class="o">+</span> <span class="n">beta</span> <span class="o">*</span> <span class="n">s</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x_next</span>
+        <span class="n">grad</span> <span class="o">=</span> <span class="n">grad_next</span>
+        <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">x</span></div>
+
+
+
+
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, Isabella Jimenez Bravo.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

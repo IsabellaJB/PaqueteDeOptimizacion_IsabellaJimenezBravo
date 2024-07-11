@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FuncionesUnaVariable.EliminacionDeRegiones package &mdash; documentación de Proyecto de optimización - 0.0.1</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=6fcc102b"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/translations.js?v=efdbd0b9"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Proyecto de optimización
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">FuncionesUnaVariable.EliminacionDeRegiones package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-FuncionesUnaVariable.EliminacionDeRegiones.FibonacciSearch">FuncionesUnaVariable.EliminacionDeRegiones.FibonacciSearch module</a><ul>
+<li><a class="reference internal" href="#FuncionesUnaVariable.EliminacionDeRegiones.FibonacciSearch.fibonacci_search"><code class="docutils literal notranslate"><span class="pre">fibonacci_search()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch">FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch module</a><ul>
+<li><a class="reference internal" href="#FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch.busqueda_dorada"><code class="docutils literal notranslate"><span class="pre">busqueda_dorada()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch.regla_eliminacion"><code class="docutils literal notranslate"><span class="pre">regla_eliminacion()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch.w_to_x"><code class="docutils literal notranslate"><span class="pre">w_to_x()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-FuncionesUnaVariable.EliminacionDeRegiones.IntervalHalving">FuncionesUnaVariable.EliminacionDeRegiones.IntervalHalving module</a><ul>
+<li><a class="reference internal" href="#FuncionesUnaVariable.EliminacionDeRegiones.IntervalHalving.interval_method"><code class="docutils literal notranslate"><span class="pre">interval_method()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-FuncionesUnaVariable.EliminacionDeRegiones">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Proyecto de optimización</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">FuncionesUnaVariable.EliminacionDeRegiones package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/rst/FuncionesUnaVariable.EliminacionDeRegiones.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="funcionesunavariable-eliminacionderegiones-package">
+<h1>FuncionesUnaVariable.EliminacionDeRegiones package<a class="headerlink" href="#funcionesunavariable-eliminacionderegiones-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-FuncionesUnaVariable.EliminacionDeRegiones.FibonacciSearch">
+<span id="funcionesunavariable-eliminacionderegiones-fibonaccisearch-module"></span><h2>FuncionesUnaVariable.EliminacionDeRegiones.FibonacciSearch module<a class="headerlink" href="#module-FuncionesUnaVariable.EliminacionDeRegiones.FibonacciSearch" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesUnaVariable.EliminacionDeRegiones.FibonacciSearch.fibonacci_search">
+<span class="sig-prename descclassname"><span class="pre">FuncionesUnaVariable.EliminacionDeRegiones.FibonacciSearch.</span></span><span class="sig-name descname"><span class="pre">fibonacci_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funcion</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesUnaVariable/EliminacionDeRegiones/FibonacciSearch.html#fibonacci_search"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesUnaVariable.EliminacionDeRegiones.FibonacciSearch.fibonacci_search" title="Link to this definition"></a></dt>
+<dd><p>Implementación del método de búsqueda utilizando la secuencia de Fibonacci para minimización de funciones.</p>
+<p>Usa todas las capacidades de Sphinx en esta descripción, por ejemplo, para dar
+ejemplos de uso …</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fibonacci_search</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="go">0.0</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>funcion</strong> (<em>callable</em>) – Función objetivo que se desea minimizar.</p></li>
+<li><p><strong>epsilon</strong> (<em>float</em>) – Precisión deseada para la aproximación del mínimo.</p></li>
+<li><p><strong>a</strong> (<em>float</em>) – Límite inferior del intervalo de búsqueda.</p></li>
+<li><p><strong>b</strong> (<em>float</em>) – Límite superior del intervalo de búsqueda.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Punto donde se estima que se encuentra el mínimo de la función.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Muestra<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si el intervalo no está correctamente definido.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch">
+<span id="funcionesunavariable-eliminacionderegiones-goldensectionsearch-module"></span><h2>FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch module<a class="headerlink" href="#module-FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch.busqueda_dorada">
+<span class="sig-prename descclassname"><span class="pre">FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch.</span></span><span class="sig-name descname"><span class="pre">busqueda_dorada</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funcion</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesUnaVariable/EliminacionDeRegiones/GoldenSectionSearch.html#busqueda_dorada"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch.busqueda_dorada" title="Link to this definition"></a></dt>
+<dd><p>Implementación del método de búsqueda por la razón áurea (Golden Section Search) para minimización de funciones.</p>
+<p>Usa todas las capacidades de Sphinx en esta descripción, por ejemplo, para dar
+ejemplos de uso …</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">busqueda_dorada</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="go">0.0</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>funcion</strong> (<em>callable</em>) – Función objetivo que se desea minimizar.</p></li>
+<li><p><strong>epsilon</strong> (<em>float</em>) – Precisión deseada para la aproximación del mínimo.</p></li>
+<li><p><strong>a</strong> (<em>float</em>) – Límite inferior del intervalo de búsqueda.</p></li>
+<li><p><strong>b</strong> (<em>float</em>) – Límite superior del intervalo de búsqueda.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Punto donde se estima que se encuentra el mínimo de la función.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Muestra<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si el intervalo no está correctamente definido.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch.regla_eliminacion">
+<span class="sig-prename descclassname"><span class="pre">FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch.</span></span><span class="sig-name descname"><span class="pre">regla_eliminacion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fx1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fx2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesUnaVariable/EliminacionDeRegiones/GoldenSectionSearch.html#regla_eliminacion"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch.regla_eliminacion" title="Link to this definition"></a></dt>
+<dd><p>Regla de eliminación utilizada en la búsqueda dorada.</p>
+<p>Parameters:
+x1 (float): Primer punto de comparación.
+x2 (float): Segundo punto de comparación.
+fx1 (float): Valor de la función en x1.
+fx2 (float): Valor de la función en x2.
+a (float): Límite inferior del intervalo de búsqueda.
+b (float): Límite superior del intervalo de búsqueda.</p>
+<p>Returns:
+tuple: Nuevo intervalo de búsqueda (a, b).</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch.w_to_x">
+<span class="sig-prename descclassname"><span class="pre">FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch.</span></span><span class="sig-name descname"><span class="pre">w_to_x</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">w</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesUnaVariable/EliminacionDeRegiones/GoldenSectionSearch.html#w_to_x"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch.w_to_x" title="Link to this definition"></a></dt>
+<dd><p>Convierte un punto w en el intervalo [0, 1] al intervalo [a, b].</p>
+<p>Parameters:
+w (float): Punto en el intervalo [0, 1].
+a (float): Límite inferior del intervalo de búsqueda.
+b (float): Límite superior del intervalo de búsqueda.</p>
+<p>Returns:
+float: Punto convertido en el intervalo [a, b].</p>
+</dd></dl>
+
+</section>
+<section id="module-FuncionesUnaVariable.EliminacionDeRegiones.IntervalHalving">
+<span id="funcionesunavariable-eliminacionderegiones-intervalhalving-module"></span><h2>FuncionesUnaVariable.EliminacionDeRegiones.IntervalHalving module<a class="headerlink" href="#module-FuncionesUnaVariable.EliminacionDeRegiones.IntervalHalving" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesUnaVariable.EliminacionDeRegiones.IntervalHalving.interval_method">
+<span class="sig-prename descclassname"><span class="pre">FuncionesUnaVariable.EliminacionDeRegiones.IntervalHalving.</span></span><span class="sig-name descname"><span class="pre">interval_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesUnaVariable/EliminacionDeRegiones/IntervalHalving.html#interval_method"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesUnaVariable.EliminacionDeRegiones.IntervalHalving.interval_method" title="Link to this definition"></a></dt>
+<dd><p>Implementación del método del intervalo para minimización de funciones.</p>
+<p>Este método busca el mínimo de una función en un intervalo [a, b] dividiendo
+iterativamente el intervalo y evaluando la función en puntos clave.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">interval_method</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="go">5.0</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>function</strong> (<em>callable</em>) – Función objetivo que se desea minimizar.</p></li>
+<li><p><strong>epsilon</strong> (<em>float</em>) – Precisión deseada para la aproximación del mínimo.</p></li>
+<li><p><strong>a</strong> (<em>float</em>) – Límite inferior del intervalo.</p></li>
+<li><p><strong>b</strong> (<em>float</em>) – Límite superior del intervalo.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Punto donde se estima que se encuentra el mínimo de la función dentro del intervalo [a, b].</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Muestra<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si el intervalo no está correctamente definido.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-FuncionesUnaVariable.EliminacionDeRegiones">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-FuncionesUnaVariable.EliminacionDeRegiones" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, Isabella Jimenez Bravo.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

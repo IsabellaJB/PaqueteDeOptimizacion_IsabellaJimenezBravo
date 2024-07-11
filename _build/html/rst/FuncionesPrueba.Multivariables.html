@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FuncionesPrueba.Multivariables package &mdash; documentación de Proyecto de optimización - 0.0.1</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=6fcc102b"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/translations.js?v=efdbd0b9"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Proyecto de optimización
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">FuncionesPrueba.Multivariables package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-FuncionesPrueba.Multivariables.multi">FuncionesPrueba.Multivariables.multi module</a><ul>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.Rastrigin"><code class="docutils literal notranslate"><span class="pre">Rastrigin()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.Rosenbrock"><code class="docutils literal notranslate"><span class="pre">Rosenbrock()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.ackley_function"><code class="docutils literal notranslate"><span class="pre">ackley_function()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.beale_function"><code class="docutils literal notranslate"><span class="pre">beale_function()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.booth_function"><code class="docutils literal notranslate"><span class="pre">booth_function()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.bukin_function"><code class="docutils literal notranslate"><span class="pre">bukin_function()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.cross_in_tray_function"><code class="docutils literal notranslate"><span class="pre">cross_in_tray_function()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.easom_function"><code class="docutils literal notranslate"><span class="pre">easom_function()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.eggholder"><code class="docutils literal notranslate"><span class="pre">eggholder()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.goldstein_price_function"><code class="docutils literal notranslate"><span class="pre">goldstein_price_function()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.himmelblaus"><code class="docutils literal notranslate"><span class="pre">himmelblaus()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.holder_table"><code class="docutils literal notranslate"><span class="pre">holder_table()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.levi_function"><code class="docutils literal notranslate"><span class="pre">levi_function()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.matyas_function"><code class="docutils literal notranslate"><span class="pre">matyas_function()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.mccormick"><code class="docutils literal notranslate"><span class="pre">mccormick()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.prueba"><code class="docutils literal notranslate"><span class="pre">prueba()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.schaffer_function_n2"><code class="docutils literal notranslate"><span class="pre">schaffer_function_n2()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.schaffer_function_n4"><code class="docutils literal notranslate"><span class="pre">schaffer_function_n4()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.shekel_function"><code class="docutils literal notranslate"><span class="pre">shekel_function()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.sphere_function"><code class="docutils literal notranslate"><span class="pre">sphere_function()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.styblinski_tang_2d"><code class="docutils literal notranslate"><span class="pre">styblinski_tang_2d()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.threehump_camel_function"><code class="docutils literal notranslate"><span class="pre">threehump_camel_function()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-FuncionesPrueba.Multivariables">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Proyecto de optimización</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">FuncionesPrueba.Multivariables package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/rst/FuncionesPrueba.Multivariables.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="funcionesprueba-multivariables-package">
+<h1>FuncionesPrueba.Multivariables package<a class="headerlink" href="#funcionesprueba-multivariables-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-FuncionesPrueba.Multivariables.multi">
+<span id="funcionesprueba-multivariables-multi-module"></span><h2>FuncionesPrueba.Multivariables.multi module<a class="headerlink" href="#module-FuncionesPrueba.Multivariables.multi" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.Rastrigin">
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">Rastrigin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#Rastrigin"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.Rastrigin" title="Link to this definition"></a></dt>
+<dd><p>Calcula la función Rastrigin, una función común de prueba en la optimización global.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Rastrigin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+<span class="go">29.0</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.ndarray</em>) – Array de variables de entrada.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor de la función Rastrigin.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.Rosenbrock">
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">Rosenbrock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#Rosenbrock"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.Rosenbrock" title="Link to this definition"></a></dt>
+<dd><p>Calcula la función Rosenbrock, una función común de prueba en la optimización global.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Rosenbrock</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+<span class="go">402</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.ndarray</em>) – Array de variables de entrada.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor de la función Rosenbrock.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.ackley_function">
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">ackley_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#ackley_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.ackley_function" title="Link to this definition"></a></dt>
+<dd><p>Calcula la función Ackley, una función común de prueba en la optimización global.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ackley_function</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+<span class="go">11.59615047203264</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.ndarray</em>) – Array de variables de entrada.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor de la función Ackley.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.beale_function">
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">beale_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#beale_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.beale_function" title="Link to this definition"></a></dt>
+<dd><p>Calcula la función Beale, que es solo para vectores de dimensión 2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">beale_function</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+<span class="go">7.203125</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.ndarray</em>) – Array de variables de entrada.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor de la función Beale.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Muestra<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si el vector no es de dimensión 2.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.booth_function">
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">booth_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#booth_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.booth_function" title="Link to this definition"></a></dt>
+<dd><p>Calcula la función Booth, que es solo para vectores de dimensión 2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">booth_function</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+<span class="go">74</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.ndarray</em>) – Array de variables de entrada.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor de la función Booth.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Muestra<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si el vector no es de dimensión 2.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.bukin_function">
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">bukin_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#bukin_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.bukin_function" title="Link to this definition"></a></dt>
+<dd><p>Calcula la función Bukin, que es solo para vectores de dimensión 2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bukin_function</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+<span class="go">100.03</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.ndarray</em>) – Array de variables de entrada.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor de la función Bukin.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Muestra<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si el vector no es de dimensión 2.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.cross_in_tray_function">
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">cross_in_tray_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#cross_in_tray_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.cross_in_tray_function" title="Link to this definition"></a></dt>
+<dd><p>Calcula la función Cross-in-Tray, que es solo para vectores de dimensión 2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cross_in_tray_function</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+<span class="go">-0.000217456657078836</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.ndarray</em>) – Array de variables de entrada.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor de la función Cross-in-Tray.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Muestra<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si el vector no es de dimensión 2.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.easom_function">
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">easom_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#easom_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.easom_function" title="Link to this definition"></a></dt>
+<dd><p>Calcula la función Easom, que es solo para vectores de dimensión 2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">easom_function</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+<span class="go">-5.450263760955594e-06</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.ndarray</em>) – Array de variables de entrada.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor de la función Easom.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Muestra<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si el vector no es de dimensión 2.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.eggholder">
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">eggholder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#eggholder"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.eggholder" title="Link to this definition"></a></dt>
+<dd><p>Calcula la función Eggholder, que es solo para vectores de dimensión 2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">eggholder</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+<span class="go">-25.841535694421856</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.ndarray</em>) – Array de variables de entrada.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor de la función Eggholder.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Muestra<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si el vector no es de dimensión 2.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.goldstein_price_function">
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">goldstein_price_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#goldstein_price_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.goldstein_price_function" title="Link to this definition"></a></dt>
+<dd><p>Calcula la función Goldstein-Price, que es solo para vectores de dimensión 2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">goldstein_price_function</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+<span class="go">15566</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.ndarray</em>) – Array de variables de entrada.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor de la función Goldstein-Price.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Muestra<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si el vector no es de dimensión 2.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.himmelblaus">
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">himmelblaus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#himmelblaus"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.himmelblaus" title="Link to this definition"></a></dt>
+<dd><p>Calcula la función Himmelblau, que es solo para vectores de dimensión 2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">himmelblaus</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+<span class="go">136</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.ndarray</em>) – Array de variables de entrada.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor de la función Himmelblau.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Muestra<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si el vector no es de dimensión 2.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.holder_table">
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">holder_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#holder_table"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.holder_table" title="Link to this definition"></a></dt>
+<dd><p>Calcula la función Holder Table, que es solo para vectores de dimensión 2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">holder_table</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+<span class="go">-1.0352761804100832</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.ndarray</em>) – Array de variables de entrada.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor de la función Holder Table.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Muestra<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si el vector no es de dimensión 2.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.levi_function">
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">levi_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#levi_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.levi_function" title="Link to this definition"></a></dt>
+<dd><p>Calcula la función Levi, que es solo para vectores de dimensión 2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">levi_function</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+<span class="go">9.25000404192189</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.ndarray</em>) – Array de variables de entrada.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor de la función Levi.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Muestra<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si el vector no es de dimensión 2.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.matyas_function">
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">matyas_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#matyas_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.matyas_function" title="Link to this definition"></a></dt>
+<dd><p>Calcula la función Matyas, que es solo para vectores de dimensión 2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">matyas_function</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+<span class="go">1.36</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.ndarray</em>) – Array de variables de entrada.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor de la función Matyas.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Muestra<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si el vector no es de dimensión 2.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.mccormick">
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">mccormick</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#mccormick"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.mccormick" title="Link to this definition"></a></dt>
+<dd><p>Calcula la función McCormick, que es solo para vectores de dimensión 2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mccormick</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+<span class="go">3.197415370720147</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.ndarray</em>) – Array de variables de entrada.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor de la función McCormick.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Muestra<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si el vector no es de dimensión 2.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.prueba">
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">prueba</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#prueba"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.prueba" title="Link to this definition"></a></dt>
+<dd><p>Calcula la suma de los cuadrados de los elementos de x.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">prueba</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+<span class="go">14</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.ndarray</em>) – Array de variables de entrada.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Suma de los cuadrados de los elementos de x.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.schaffer_function_n2">
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">schaffer_function_n2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#schaffer_function_n2"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.schaffer_function_n2" title="Link to this definition"></a></dt>
+<dd><p>Calcula la función Schaffer N. 2, que es solo para vectores de dimensión 2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">schaffer_function_n2</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+<span class="go">0.01263557920118913</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.ndarray</em>) – Array de variables de entrada.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor de la función Schaffer N. 2.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Muestra<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si el vector no es de dimensión 2.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.schaffer_function_n4">
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">schaffer_function_n4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#schaffer_function_n4"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.schaffer_function_n4" title="Link to this definition"></a></dt>
+<dd><p>Calcula la función Schaffer N. 4, que es solo para vectores de dimensión 2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">schaffer_function_n4</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+<span class="go">0.014689956223166331</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.ndarray</em>) – Array de variables de entrada.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor de la función Schaffer N. 4.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Muestra<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si el vector no es de dimensión 2.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.shekel_function">
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">shekel_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#shekel_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.shekel_function" title="Link to this definition"></a></dt>
+<dd><p>Calcula la función Shekel, que es solo para vectores de dimensión 2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">C</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">beta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">shekel_function</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]),</span> <span class="n">C</span><span class="p">,</span> <span class="n">beta</span><span class="p">)</span>
+<span class="go">-0.44567773022905644</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>numpy.ndarray</em>) – Array de variables de entrada.</p></li>
+<li><p><strong>C</strong> (<em>numpy.ndarray</em>) – Matriz de coeficientes.</p></li>
+<li><p><strong>beta</strong> (<em>numpy.ndarray</em>) – Vector de coeficientes.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor de la función Shekel.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Muestra<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si el vector no es de dimensión 2.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.sphere_function">
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">sphere_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#sphere_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.sphere_function" title="Link to this definition"></a></dt>
+<dd><p>Calcula la función esfera, que es la suma de los cuadrados de los elementos de x.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">sphere_function</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+<span class="go">14</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.ndarray</em>) – Array de variables de entrada.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Suma de los cuadrados de los elementos de x.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.styblinski_tang_2d">
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">styblinski_tang_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#styblinski_tang_2d"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.styblinski_tang_2d" title="Link to this definition"></a></dt>
+<dd><p>Calcula la función Styblinski-Tang, que es solo para vectores de dimensión 2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">styblinski_tang_2d</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+<span class="go">-16.25</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.ndarray</em>) – Array de variables de entrada.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor de la función Styblinski-Tang.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Muestra<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si el vector no es de dimensión 2.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.threehump_camel_function">
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">threehump_camel_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#threehump_camel_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.threehump_camel_function" title="Link to this definition"></a></dt>
+<dd><p>Calcula la función Three-hump Camel, que es solo para vectores de dimensión 2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">threehump_camel_function</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]))</span>
+<span class="go">2.8055555555555554</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>x</strong> (<em>numpy.ndarray</em>) – Array de variables de entrada.</p>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor de la función Three-hump Camel.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Muestra<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si el vector no es de dimensión 2.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-FuncionesPrueba.Multivariables">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-FuncionesPrueba.Multivariables" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, Isabella Jimenez Bravo.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FuncionesUnaVariable.BasadosEnLaDerivada package &mdash; documentación de Proyecto de optimización - 0.0.1</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=6fcc102b"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/translations.js?v=efdbd0b9"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Proyecto de optimización
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">FuncionesUnaVariable.BasadosEnLaDerivada package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeBiseccion">FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeBiseccion module</a><ul>
+<li><a class="reference internal" href="#FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeBiseccion.metodo_biseccion"><code class="docutils literal notranslate"><span class="pre">metodo_biseccion()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeBiseccion.primera_derivada"><code class="docutils literal notranslate"><span class="pre">primera_derivada()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeBiseccion.segunda_derivada"><code class="docutils literal notranslate"><span class="pre">segunda_derivada()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeLaSecante">FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeLaSecante module</a><ul>
+<li><a class="reference internal" href="#FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeLaSecante.metodo_secante"><code class="docutils literal notranslate"><span class="pre">metodo_secante()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeLaSecante.primera_derivada"><code class="docutils literal notranslate"><span class="pre">primera_derivada()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeLaSecante.segunda_derivada"><code class="docutils literal notranslate"><span class="pre">segunda_derivada()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeLaSecante.z"><code class="docutils literal notranslate"><span class="pre">z()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson">FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson module</a><ul>
+<li><a class="reference internal" href="#FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson.newton_raphson"><code class="docutils literal notranslate"><span class="pre">newton_raphson()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson.primera_derivada"><code class="docutils literal notranslate"><span class="pre">primera_derivada()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson.segunda_derivada"><code class="docutils literal notranslate"><span class="pre">segunda_derivada()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-FuncionesUnaVariable.BasadosEnLaDerivada">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Proyecto de optimización</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">FuncionesUnaVariable.BasadosEnLaDerivada package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/rst/FuncionesUnaVariable.BasadosEnLaDerivada.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="funcionesunavariable-basadosenladerivada-package">
+<h1>FuncionesUnaVariable.BasadosEnLaDerivada package<a class="headerlink" href="#funcionesunavariable-basadosenladerivada-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeBiseccion">
+<span id="funcionesunavariable-basadosenladerivada-metododebiseccion-module"></span><h2>FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeBiseccion module<a class="headerlink" href="#module-FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeBiseccion" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeBiseccion.metodo_biseccion">
+<span class="sig-prename descclassname"><span class="pre">FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeBiseccion.</span></span><span class="sig-name descname"><span class="pre">metodo_biseccion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">funcion</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesUnaVariable/BasadosEnLaDerivada/MetodoDeBiseccion.html#metodo_biseccion"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeBiseccion.metodo_biseccion" title="Link to this definition"></a></dt>
+<dd><p>Encuentra una raíz de una función usando el método de bisección.
+El método de bisección es un algoritmo numérico para encontrar
+raíces de una función en un intervalo dado. Funciona dividiendo
+repetidamente el intervalo por la mitad y seleccionando el subintervalo
+donde la raíz probablemente se encuentra, hasta que el intervalo sea lo
+suficientemente pequeño o se alcance una precisión especificada.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">funcion</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">epsilon</span> <span class="o">=</span> <span class="mf">1e-6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">metodo_biseccion</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">funcion</span><span class="p">,</span> <span class="n">epsilon</span><span class="p">)</span>
+<span class="go">1.5213797092437744</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>tuple</em>) – Intervalo inicial [a, b] donde se busca la raíz.</p></li>
+<li><p><strong>funcion</strong> (<em>callable</em>) – Función objetivo.</p></li>
+<li><p><strong>epsilon</strong> (<em>float</em>) – Tolerancia para la convergencia del método.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Aproximación de la raíz encontrada.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeBiseccion.primera_derivada">
+<span class="sig-prename descclassname"><span class="pre">FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeBiseccion.</span></span><span class="sig-name descname"><span class="pre">primera_derivada</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">funcion</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesUnaVariable/BasadosEnLaDerivada/MetodoDeBiseccion.html#primera_derivada"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeBiseccion.primera_derivada" title="Link to this definition"></a></dt>
+<dd><p>Calcula la primera derivada de una función en un punto dado utilizando diferencias finitas.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">funcion</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">primera_derivada</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">funcion</span><span class="p">)</span>
+<span class="go">2.000000000002</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – El punto en el que se calcula la derivada.</p></li>
+<li><p><strong>funcion</strong> (<em>callable</em>) – La función para la cual se calcula la derivada.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>La primera derivada calculada en el punto dado.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeBiseccion.segunda_derivada">
+<span class="sig-prename descclassname"><span class="pre">FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeBiseccion.</span></span><span class="sig-name descname"><span class="pre">segunda_derivada</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">funcion</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesUnaVariable/BasadosEnLaDerivada/MetodoDeBiseccion.html#segunda_derivada"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeBiseccion.segunda_derivada" title="Link to this definition"></a></dt>
+<dd><p>Calcula la segunda derivada de una función en un punto dado utilizando diferencias finitas.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">funcion</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">segunda_derivada</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">funcion</span><span class="p">)</span>
+<span class="go">2.000000165480742</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – El punto en el que se calcula la derivada.</p></li>
+<li><p><strong>funcion</strong> (<em>callable</em>) – La función para la cual se calcula la derivada.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>La segunda derivada calculada en el punto dado.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeLaSecante">
+<span id="funcionesunavariable-basadosenladerivada-metododelasecante-module"></span><h2>FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeLaSecante module<a class="headerlink" href="#module-FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeLaSecante" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeLaSecante.metodo_secante">
+<span class="sig-prename descclassname"><span class="pre">FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeLaSecante.</span></span><span class="sig-name descname"><span class="pre">metodo_secante</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_inicial</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">funcion</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iter_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesUnaVariable/BasadosEnLaDerivada/MetodoDeLaSecante.html#metodo_secante"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeLaSecante.metodo_secante" title="Link to this definition"></a></dt>
+<dd><p>Encuentra una raíz de una función no lineal usando el método de la secante.
+El método de la secante es un algoritmo numérico iterativo para encontrar
+las raíces de una función no lineal. A diferencia del método de Newton-Raphson,
+no requiere la evaluación de la derivada de la función en cada paso, haciendo
+el cálculo de la derivada menos crítico.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">funcion</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="n">x</span> <span class="o">-</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x_inicial</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">epsilon</span> <span class="o">=</span> <span class="mf">1e-6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">metodo_secante</span><span class="p">(</span><span class="n">x_inicial</span><span class="p">,</span> <span class="n">funcion</span><span class="p">,</span> <span class="n">epsilon</span><span class="p">)</span>
+<span class="go">1.5213797068045676</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_inicial</strong> (<em>tuple</em>) – Tupla con los dos puntos iniciales para comenzar el método.</p></li>
+<li><p><strong>funcion</strong> (<em>callable</em>) – Función objetivo.</p></li>
+<li><p><strong>epsilon</strong> (<em>float</em>) – Tolerancia para la convergencia del método.</p></li>
+<li><p><strong>iter_max</strong> (<em>int</em><em>, </em><em>optional</em>) – Número máximo de iteraciones permitidas. Default es 100.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Aproximación de la raíz encontrada.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p>ValueError si el método no converge después de iter_max iteraciones.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeLaSecante.primera_derivada">
+<span class="sig-prename descclassname"><span class="pre">FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeLaSecante.</span></span><span class="sig-name descname"><span class="pre">primera_derivada</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">funcion</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesUnaVariable/BasadosEnLaDerivada/MetodoDeLaSecante.html#primera_derivada"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeLaSecante.primera_derivada" title="Link to this definition"></a></dt>
+<dd><p>Calcula la primera derivada de una función en un punto dado utilizando diferencias finitas.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">funcion</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">primera_derivada</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">funcion</span><span class="p">)</span>
+<span class="go">2.000000000002</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – El punto en el que se calcula la derivada.</p></li>
+<li><p><strong>funcion</strong> (<em>callable</em>) – La función para la cual se calcula la derivada.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>La primera derivada calculada en el punto dado.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeLaSecante.segunda_derivada">
+<span class="sig-prename descclassname"><span class="pre">FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeLaSecante.</span></span><span class="sig-name descname"><span class="pre">segunda_derivada</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">funcion</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesUnaVariable/BasadosEnLaDerivada/MetodoDeLaSecante.html#segunda_derivada"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeLaSecante.segunda_derivada" title="Link to this definition"></a></dt>
+<dd><p>Calcula la segunda derivada de una función en un punto dado utilizando diferencias finitas.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">funcion</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">segunda_derivada</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">funcion</span><span class="p">)</span>
+<span class="go">2.000000165480742</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – El punto en el que se calcula la derivada.</p></li>
+<li><p><strong>funcion</strong> (<em>callable</em>) – La función para la cual se calcula la derivada.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>La segunda derivada calculada en el punto dado.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeLaSecante.z">
+<span class="sig-prename descclassname"><span class="pre">FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeLaSecante.</span></span><span class="sig-name descname"><span class="pre">z</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">funcion</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesUnaVariable/BasadosEnLaDerivada/MetodoDeLaSecante.html#z"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesUnaVariable.BasadosEnLaDerivada.MetodoDeLaSecante.z" title="Link to this definition"></a></dt>
+<dd><p>Calcula el siguiente punto de aproximación en el método de la secante.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">funcion</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">3.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">z</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">funcion</span><span class="p">)</span>
+<span class="go">2.090909090909091</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x1</strong> (<em>float</em>) – Primer punto de evaluación.</p></li>
+<li><p><strong>x2</strong> (<em>float</em>) – Segundo punto de evaluación.</p></li>
+<li><p><strong>funcion</strong> (<em>callable</em>) – La función objetivo.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>El siguiente punto de aproximación.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson">
+<span id="funcionesunavariable-basadosenladerivada-newtonraphson-module"></span><h2>FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson module<a class="headerlink" href="#module-FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson.newton_raphson">
+<span class="sig-prename descclassname"><span class="pre">FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson.</span></span><span class="sig-name descname"><span class="pre">newton_raphson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">funcion</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesUnaVariable/BasadosEnLaDerivada/NewtonRaphson.html#newton_raphson"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson.newton_raphson" title="Link to this definition"></a></dt>
+<dd><p>Implementa el método de Newton-Raphson para encontrar una raíz de la función dada.
+El método de Newton-Raphson es un algoritmo iterativo utilizado para encontrar
+numéricamente las raíces de una función mediante la aproximación sucesiva de
+un punto inicial hacia la raíz, basándose en la derivada de la función.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">funcion</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x_inicial</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">epsilon</span> <span class="o">=</span> <span class="mf">1e-6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">newton_raphson</span><span class="p">(</span><span class="n">x_inicial</span><span class="p">,</span> <span class="n">funcion</span><span class="p">,</span> <span class="n">epsilon</span><span class="p">)</span>
+<span class="go">1.4142135623746899</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>list</em><em> of </em><em>float</em>) – Lista de puntos iniciales de búsqueda.</p></li>
+<li><p><strong>funcion</strong> (<em>callable</em>) – Función objetivo para la cual se busca la raíz.</p></li>
+<li><p><strong>epsilon</strong> (<em>float</em>) – Tolerancia de convergencia del método.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>Valor aproximado de la raíz de la función.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+<dt class="field-even">Muestra<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – Si la longitud de x es cero o si no se alcanza la convergencia.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson.primera_derivada">
+<span class="sig-prename descclassname"><span class="pre">FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson.</span></span><span class="sig-name descname"><span class="pre">primera_derivada</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">funcion</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesUnaVariable/BasadosEnLaDerivada/NewtonRaphson.html#primera_derivada"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson.primera_derivada" title="Link to this definition"></a></dt>
+<dd><p>Calcula la primera derivada de una función en un punto dado utilizando diferencias finitas.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">funcion</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">primera_derivada</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">funcion</span><span class="p">)</span>
+<span class="go">2.000000000002</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – El punto en el que se calcula la derivada.</p></li>
+<li><p><strong>funcion</strong> (<em>callable</em>) – La función para la cual se calcula la derivada.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>La primera derivada calculada en el punto dado.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson.segunda_derivada">
+<span class="sig-prename descclassname"><span class="pre">FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson.</span></span><span class="sig-name descname"><span class="pre">segunda_derivada</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">funcion</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesUnaVariable/BasadosEnLaDerivada/NewtonRaphson.html#segunda_derivada"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson.segunda_derivada" title="Link to this definition"></a></dt>
+<dd><p>Calcula la segunda derivada de una función en un punto dado utilizando diferencias finitas.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">funcion</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">segunda_derivada</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">funcion</span><span class="p">)</span>
+<span class="go">2.000000165480742</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parámetros<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – El punto en el que se calcula la derivada.</p></li>
+<li><p><strong>funcion</strong> (<em>callable</em>) – La función para la cual se calcula la derivada.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Devuelve<span class="colon">:</span></dt>
+<dd class="field-even"><p>La segunda derivada calculada en el punto dado.</p>
+</dd>
+<dt class="field-odd">Tipo del valor devuelto<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-FuncionesUnaVariable.BasadosEnLaDerivada">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-FuncionesUnaVariable.BasadosEnLaDerivada" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, Isabella Jimenez Bravo.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

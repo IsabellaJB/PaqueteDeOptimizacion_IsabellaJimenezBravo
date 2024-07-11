@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FuncionesMultivariables.Gradiente.Cauchy &mdash; documentación de Proyecto de optimización - 0.0.1</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=6fcc102b"></script>
+        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../../_static/translations.js?v=efdbd0b9"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Proyecto de optimización
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Proyecto de optimización</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Código de módulo</a></li>
+      <li class="breadcrumb-item active">FuncionesMultivariables.Gradiente.Cauchy</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Código fuente para FuncionesMultivariables.Gradiente.Cauchy</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+
+
+<span class="c1"># ---------------------------------- GRADIENTE ---------------------------------- </span>
+<div class="viewcode-block" id="gradiente">
+<a class="viewcode-back" href="../../../rst/FuncionesMultivariables.Gradiente.html#FuncionesMultivariables.Gradiente.Cauchy.gradiente">[documentos]</a>
+<span class="k">def</span> <span class="nf">gradiente</span><span class="p">(</span><span class="n">funcion</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">delta</span><span class="o">=</span><span class="mf">0.001</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcula el gradiente de una función en un punto dado utilizando diferencias finitas.</span>
+
+<span class="sd">    :Example:</span>
+
+<span class="sd">    &gt;&gt;&gt; def funcion(x):</span>
+<span class="sd">    ...     return sum(xi**2 for xi in x)</span>
+<span class="sd">    &gt;&gt;&gt; x = np.array([1.0, 2.0])</span>
+<span class="sd">    &gt;&gt;&gt; gradiente(funcion, x)</span>
+<span class="sd">    array([2.001, 4.001])</span>
+
+<span class="sd">    :param funcion: La función objetivo cuya derivada se desea calcular.</span>
+<span class="sd">    :type funcion: callable</span>
+<span class="sd">    :param x: El punto en el que se desea calcular el gradiente.</span>
+<span class="sd">    :type x: ndarray</span>
+<span class="sd">    :param delta: El tamaño del paso para calcular las diferencias finitas. Default es 0.001.</span>
+<span class="sd">    :type delta: float, optional</span>
+<span class="sd">    :return: El gradiente calculado en el punto dado.</span>
+<span class="sd">    :rtype: ndarray</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">derivadas</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+        <span class="n">copia</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">copia</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">delta</span>
+        <span class="n">valor1</span> <span class="o">=</span> <span class="n">funcion</span><span class="p">(</span><span class="n">copia</span><span class="p">)</span>
+        <span class="n">copia</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">delta</span>
+        <span class="n">valor2</span> <span class="o">=</span> <span class="n">funcion</span><span class="p">(</span><span class="n">copia</span><span class="p">)</span>
+        <span class="n">derivada</span> <span class="o">=</span> <span class="p">(</span><span class="n">valor1</span> <span class="o">-</span> <span class="n">valor2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">delta</span><span class="p">)</span>
+        <span class="n">derivadas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">derivada</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">derivadas</span><span class="p">)</span></div>
+
+
+
+
+
+
+<span class="c1"># ----------------------------------- DISTANCIA ORIGEN ----------------------------------</span>
+<div class="viewcode-block" id="distancia_origen">
+<a class="viewcode-back" href="../../../rst/FuncionesMultivariables.Gradiente.html#FuncionesMultivariables.Gradiente.Cauchy.distancia_origen">[documentos]</a>
+<span class="k">def</span> <span class="nf">distancia_origen</span><span class="p">(</span><span class="n">vector</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcula la distancia euclidiana de un vector al origen.</span>
+
+<span class="sd">    :Example:</span>
+
+<span class="sd">    &gt;&gt;&gt; vector = np.array([3.0, 4.0])</span>
+<span class="sd">    &gt;&gt;&gt; distancia_origen(vector)</span>
+<span class="sd">    5.0</span>
+
+<span class="sd">    :param vector: El vector cuya distancia al origen se desea calcular.</span>
+<span class="sd">    :type vector: ndarray</span>
+<span class="sd">    :return: La distancia euclidiana del vector al origen.</span>
+<span class="sd">    :rtype: float</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">vector</span><span class="p">)</span></div>
+
+
+
+
+
+
+
+
+<span class="c1"># --------------------------------------- CAUCHY -------------------------------------</span>
+<div class="viewcode-block" id="cauchy">
+<a class="viewcode-back" href="../../../rst/FuncionesMultivariables.Gradiente.html#FuncionesMultivariables.Gradiente.Cauchy.cauchy">[documentos]</a>
+<span class="k">def</span> <span class="nf">cauchy</span><span class="p">(</span><span class="n">funcion_objetivo</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">metodo_busqueda</span><span class="p">,</span> <span class="n">epsilon1</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">,</span> <span class="n">epsilon2</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">,</span> <span class="n">max_iterations</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Implementa el método de Cauchy para la optimización de funciones con restricciones.</span>
+<span class="sd">    El Método de Cauchy, también conocido como el método del gradiente descendente, </span>
+<span class="sd">    es una técnica de optimización iterativa utilizada para encontrar el mínimo de una función.</span>
+
+<span class="sd">    :Example:</span>
+
+<span class="sd">    &gt;&gt;&gt; def funcion_objetivo(x):</span>
+<span class="sd">    ...     return sum(xi**2 for xi in x)</span>
+<span class="sd">    &gt;&gt;&gt; def metodo_busqueda(alpha_calcular, epsilon, a, b):</span>
+<span class="sd">    ...     return 0.1  # Dummy implementation for example</span>
+<span class="sd">    &gt;&gt;&gt; x = np.array([1.0, 1.0])</span>
+<span class="sd">    &gt;&gt;&gt; cauchy(funcion_objetivo, x, metodo_busqueda)</span>
+<span class="sd">    array([0., 0.])</span>
+
+<span class="sd">    :param funcion_objetivo: La función objetivo a minimizar.</span>
+<span class="sd">    :type funcion_objetivo: callable</span>
+<span class="sd">    :param x: Punto inicial de búsqueda.</span>
+<span class="sd">    :type x: ndarray</span>
+<span class="sd">    :param metodo_busqueda: Método de búsqueda para calcular el paso alpha.</span>
+<span class="sd">    :type metodo_busqueda: callable</span>
+<span class="sd">    :param epsilon1: Tolerancia para la condición de convergencia basada en la distancia del gradiente al origen. Default es 1e-6.</span>
+<span class="sd">    :type epsilon1: float, optional</span>
+<span class="sd">    :param epsilon2: Tolerancia para la condición de convergencia basada en la diferencia relativa entre iteraciones. Default es 1e-6.</span>
+<span class="sd">    :type epsilon2: float, optional</span>
+<span class="sd">    :param max_iterations: Número máximo de iteraciones permitidas. Default es 100.</span>
+<span class="sd">    :type max_iterations: int, optional</span>
+<span class="sd">    :return: Punto óptimo encontrado.</span>
+<span class="sd">    :rtype: ndarray</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">terminar</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">xk</span> <span class="o">=</span> <span class="n">x</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">terminar</span><span class="p">:</span>
+        <span class="n">gradienteX</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">gradiente</span><span class="p">(</span><span class="n">funcion_objetivo</span><span class="p">,</span><span class="n">xk</span><span class="p">))</span>
+        <span class="n">distancia</span> <span class="o">=</span> <span class="n">distancia_origen</span><span class="p">(</span><span class="n">gradienteX</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">distancia</span> <span class="o">&lt;=</span> <span class="n">epsilon1</span><span class="p">:</span>
+            <span class="n">terminar</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="p">(</span><span class="n">k</span> <span class="o">&gt;=</span> <span class="n">max_iterations</span><span class="p">):</span>
+            <span class="n">terminar</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">def</span> <span class="nf">alpha_calcular</span><span class="p">(</span><span class="n">alpha</span><span class="p">):</span>
+                <span class="k">return</span> <span class="n">funcion_objetivo</span><span class="p">(</span><span class="n">xk</span> <span class="o">-</span> <span class="n">alpha</span><span class="o">*</span><span class="n">gradienteX</span><span class="p">)</span>
+            <span class="n">alpha</span> <span class="o">=</span> <span class="n">metodo_busqueda</span><span class="p">(</span><span class="n">alpha_calcular</span><span class="p">,</span><span class="n">epsilon2</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">)</span>
+            <span class="n">x_k1</span> <span class="o">=</span> <span class="n">xk</span> <span class="o">-</span> <span class="n">alpha</span> <span class="o">*</span> <span class="n">gradienteX</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">distancia_origen</span><span class="p">(</span><span class="n">x_k1</span><span class="o">-</span><span class="n">xk</span><span class="p">)</span><span class="o">/</span><span class="n">distancia_origen</span><span class="p">(</span><span class="n">xk</span><span class="p">)</span><span class="o">+</span><span class="mf">0.00001</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">epsilon2</span><span class="p">:</span>
+                <span class="n">terminar</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
+                <span class="n">xk</span> <span class="o">=</span> <span class="n">x_k1</span>
+    <span class="k">return</span> <span class="n">xk</span></div>
+
+
+
+
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, Isabella Jimenez Bravo.</p>
+  </div>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
