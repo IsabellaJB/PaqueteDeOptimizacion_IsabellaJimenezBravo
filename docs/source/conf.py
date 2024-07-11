@@ -30,14 +30,6 @@ sys.path.insert(0, os.path.abspath('../paqueteoptimizacion_isabellajb/FuncionesM
 sys.path.insert(0, os.path.abspath('../paqueteoptimizacion_isabellajb/FuncionesUnaVariable/BasadosEnLaDerivada'))
 sys.path.insert(0, os.path.abspath('../paqueteoptimizacion_isabellajb/FuncionesUnaVariable/EliminacionDeRegiones'))
 
-# sys.path.insert(0, os.path.abspath('../../'))
-# sys.path.insert(0, os.path.abspath('../paqueteoptimizacion_isabellajb/FuncionesMultivariables'))
-# # O:\SextoSemestre\PaqueteDeOptimizacion_IsabellaJimenezBravo\paqueteoptimizacion_isabellajb\FuncionesMultivariables
-# sys.path.insert(0, os.path.abspath('../paqueteoptimizacion_isabellajb/FuncionesUnaVariable'))
-# sys.path.insert(0, os.path.abspath('../../FuncionesMultivariables/Directos'))
-# sys.path.insert(0, os.path.abspath('../../FuncionesMultivariables/Gradiente'))
-# sys.path.insert(0, os.path.abspath('../../FuncionesUnaVariable/BasadosEnLaDerivada'))
-# sys.path.insert(0, os.path.abspath('../../FuncionesUnaVariable/EliminacionDeRegiones'))
 
 
 
