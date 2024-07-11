@@ -20,6 +20,6 @@ formats:
   - epub
 
 # Declara las dependencias de Python necesarias para construir tu documentación
-python:
-  install:
-    - requirements: requirements.txt  # Ajusta si tienes un archivo requirements.txt
+# python:
+#   install:
+#     - requirements: requirements.txt  # Ajusta si tienes un archivo requirements.txt
