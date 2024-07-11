@@ -50,7 +50,7 @@ Instalación
 
 Para instalar el paquete, puedes usar el siguiente comando:
 
-``pip install paqueteoptimizacion-isabellajb==0.0.1``
+``pip install paqueteoptimizacion-isabellajb-1==0.0.1``
 
 Link de donde obtener más información del paquete: 
-https://pypi.org/project/paqueteoptimizacion-isabellajb/0.0.1/
+https://pypi.org/project/paqueteoptimizacion-isabellajb-1/0.0.1/
