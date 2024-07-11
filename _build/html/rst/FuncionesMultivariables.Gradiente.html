@@ -1,109 +1,49 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="es" data-content_root="../">
-<head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FuncionesMultivariables.Gradiente package &mdash; documentación de Proyecto de optimización - 0.0.1</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+<html lang="es" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=6fcc102b"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="../_static/translations.js?v=efdbd0b9"></script>
-    <script src="../_static/js/theme.js"></script>
+    <title>FuncionesMultivariables.Gradiente package &#8212; documentación de Proyecto de optimización - 0.0.1</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=0f882399" />
+    <script src="../_static/documentation_options.js?v=6fcc102b"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/translations.js?v=efdbd0b9"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" /> 
-</head>
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Índice de Módulos Python"
+             >módulos</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">documentación de Proyecto de optimización - 0.0.1</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FuncionesMultivariables.Gradiente package</a></li> 
+      </ul>
+    </div>  
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-
-          
-          
-          <a href="../index.html" class="icon icon-home">
-            Proyecto de optimización
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">FuncionesMultivariables.Gradiente package</a><ul>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-FuncionesMultivariables.Gradiente.Cauchy">FuncionesMultivariables.Gradiente.Cauchy module</a><ul>
-<li><a class="reference internal" href="#FuncionesMultivariables.Gradiente.Cauchy.cauchy"><code class="docutils literal notranslate"><span class="pre">cauchy()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesMultivariables.Gradiente.Cauchy.distancia_origen"><code class="docutils literal notranslate"><span class="pre">distancia_origen()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesMultivariables.Gradiente.Cauchy.gradiente"><code class="docutils literal notranslate"><span class="pre">gradiente()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-FuncionesMultivariables.Gradiente.FletcherReeves">FuncionesMultivariables.Gradiente.FletcherReeves module</a><ul>
-<li><a class="reference internal" href="#FuncionesMultivariables.Gradiente.FletcherReeves.gradiente"><code class="docutils literal notranslate"><span class="pre">gradiente()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesMultivariables.Gradiente.FletcherReeves.gradiente_conjugado"><code class="docutils literal notranslate"><span class="pre">gradiente_conjugado()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-FuncionesMultivariables.Gradiente.Newton">FuncionesMultivariables.Gradiente.Newton module</a><ul>
-<li><a class="reference internal" href="#FuncionesMultivariables.Gradiente.Newton.distancia_origen"><code class="docutils literal notranslate"><span class="pre">distancia_origen()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesMultivariables.Gradiente.Newton.gradiente"><code class="docutils literal notranslate"><span class="pre">gradiente()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesMultivariables.Gradiente.Newton.hessiana"><code class="docutils literal notranslate"><span class="pre">hessiana()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesMultivariables.Gradiente.Newton.newton"><code class="docutils literal notranslate"><span class="pre">newton()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-FuncionesMultivariables.Gradiente">Module contents</a></li>
-</ul>
-</li>
-</ul>
-</div>
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Proyecto de optimización</a>
-      </nav>
-
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">FuncionesMultivariables.Gradiente package</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/rst/FuncionesMultivariables.Gradiente.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
-      </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
   <section id="funcionesmultivariables-gradiente-package">
-<h1>FuncionesMultivariables.Gradiente package<a class="headerlink" href="#funcionesmultivariables-gradiente-package" title="Link to this heading"></a></h1>
+<h1>FuncionesMultivariables.Gradiente package<a class="headerlink" href="#funcionesmultivariables-gradiente-package" title="Link to this heading">¶</a></h1>
 <section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
 </section>
 <section id="module-FuncionesMultivariables.Gradiente.Cauchy">
-<span id="funcionesmultivariables-gradiente-cauchy-module"></span><h2>FuncionesMultivariables.Gradiente.Cauchy module<a class="headerlink" href="#module-FuncionesMultivariables.Gradiente.Cauchy" title="Link to this heading"></a></h2>
+<span id="funcionesmultivariables-gradiente-cauchy-module"></span><h2>FuncionesMultivariables.Gradiente.Cauchy module<a class="headerlink" href="#module-FuncionesMultivariables.Gradiente.Cauchy" title="Link to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesMultivariables.Gradiente.Cauchy.cauchy">
-<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Gradiente.Cauchy.</span></span><span class="sig-name descname"><span class="pre">cauchy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funcion_objetivo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metodo_busqueda</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Gradiente/Cauchy.html#cauchy"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Gradiente.Cauchy.cauchy" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Gradiente.Cauchy.</span></span><span class="sig-name descname"><span class="pre">cauchy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funcion_objetivo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metodo_busqueda</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Gradiente/Cauchy.html#cauchy"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Gradiente.Cauchy.cauchy" title="Link to this definition">¶</a></dt>
 <dd><p>Implementa el método de Cauchy para la optimización de funciones con restricciones.
 El Método de Cauchy, también conocido como el método del gradiente descendente,
 es una técnica de optimización iterativa utilizada para encontrar el mínimo de una función.</p>
@@ -142,7 +82,7 @@ es una técnica de optimización iterativa utilizada para encontrar el mínimo d
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesMultivariables.Gradiente.Cauchy.distancia_origen">
-<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Gradiente.Cauchy.</span></span><span class="sig-name descname"><span class="pre">distancia_origen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vector</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Gradiente/Cauchy.html#distancia_origen"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Gradiente.Cauchy.distancia_origen" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Gradiente.Cauchy.</span></span><span class="sig-name descname"><span class="pre">distancia_origen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vector</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Gradiente/Cauchy.html#distancia_origen"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Gradiente.Cauchy.distancia_origen" title="Link to this definition">¶</a></dt>
 <dd><p>Calcula la distancia euclidiana de un vector al origen.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Example<span class="colon">:</span></dt>
@@ -168,7 +108,7 @@ es una técnica de optimización iterativa utilizada para encontrar el mínimo d
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesMultivariables.Gradiente.Cauchy.gradiente">
-<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Gradiente.Cauchy.</span></span><span class="sig-name descname"><span class="pre">gradiente</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funcion</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Gradiente/Cauchy.html#gradiente"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Gradiente.Cauchy.gradiente" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Gradiente.Cauchy.</span></span><span class="sig-name descname"><span class="pre">gradiente</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funcion</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Gradiente/Cauchy.html#gradiente"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Gradiente.Cauchy.gradiente" title="Link to this definition">¶</a></dt>
 <dd><p>Calcula el gradiente de una función en un punto dado utilizando diferencias finitas.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Example<span class="colon">:</span></dt>
@@ -200,10 +140,10 @@ es una técnica de optimización iterativa utilizada para encontrar el mínimo d
 
 </section>
 <section id="module-FuncionesMultivariables.Gradiente.FletcherReeves">
-<span id="funcionesmultivariables-gradiente-fletcherreeves-module"></span><h2>FuncionesMultivariables.Gradiente.FletcherReeves module<a class="headerlink" href="#module-FuncionesMultivariables.Gradiente.FletcherReeves" title="Link to this heading"></a></h2>
+<span id="funcionesmultivariables-gradiente-fletcherreeves-module"></span><h2>FuncionesMultivariables.Gradiente.FletcherReeves module<a class="headerlink" href="#module-FuncionesMultivariables.Gradiente.FletcherReeves" title="Link to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesMultivariables.Gradiente.FletcherReeves.gradiente">
-<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Gradiente.FletcherReeves.</span></span><span class="sig-name descname"><span class="pre">gradiente</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funcion</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Gradiente/FletcherReeves.html#gradiente"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Gradiente.FletcherReeves.gradiente" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Gradiente.FletcherReeves.</span></span><span class="sig-name descname"><span class="pre">gradiente</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funcion</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Gradiente/FletcherReeves.html#gradiente"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Gradiente.FletcherReeves.gradiente" title="Link to this definition">¶</a></dt>
 <dd><p>Calcula el gradiente de una función en un punto dado utilizando diferencias finitas.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Example<span class="colon">:</span></dt>
@@ -235,7 +175,7 @@ es una técnica de optimización iterativa utilizada para encontrar el mínimo d
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesMultivariables.Gradiente.FletcherReeves.gradiente_conjugado">
-<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Gradiente.FletcherReeves.</span></span><span class="sig-name descname"><span class="pre">gradiente_conjugado</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f_o</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metodo_busqueda</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Gradiente/FletcherReeves.html#gradiente_conjugado"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Gradiente.FletcherReeves.gradiente_conjugado" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Gradiente.FletcherReeves.</span></span><span class="sig-name descname"><span class="pre">gradiente_conjugado</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f_o</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metodo_busqueda</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Gradiente/FletcherReeves.html#gradiente_conjugado"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Gradiente.FletcherReeves.gradiente_conjugado" title="Link to this definition">¶</a></dt>
 <dd><p>Implementa el método del Gradiente Conjugado para la optimización de funciones.
 El método del gradiente conjugado utiliza tanto la información del gradiente en
 la iteración actual como la de iteraciones previas para calcular la dirección de
@@ -275,10 +215,10 @@ búsqueda siguiente.</p>
 
 </section>
 <section id="module-FuncionesMultivariables.Gradiente.Newton">
-<span id="funcionesmultivariables-gradiente-newton-module"></span><h2>FuncionesMultivariables.Gradiente.Newton module<a class="headerlink" href="#module-FuncionesMultivariables.Gradiente.Newton" title="Link to this heading"></a></h2>
+<span id="funcionesmultivariables-gradiente-newton-module"></span><h2>FuncionesMultivariables.Gradiente.Newton module<a class="headerlink" href="#module-FuncionesMultivariables.Gradiente.Newton" title="Link to this heading">¶</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesMultivariables.Gradiente.Newton.distancia_origen">
-<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Gradiente.Newton.</span></span><span class="sig-name descname"><span class="pre">distancia_origen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vector</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Gradiente/Newton.html#distancia_origen"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Gradiente.Newton.distancia_origen" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Gradiente.Newton.</span></span><span class="sig-name descname"><span class="pre">distancia_origen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vector</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Gradiente/Newton.html#distancia_origen"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Gradiente.Newton.distancia_origen" title="Link to this definition">¶</a></dt>
 <dd><p>Calcula la distancia de un vector al origen.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Example<span class="colon">:</span></dt>
@@ -304,7 +244,7 @@ búsqueda siguiente.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesMultivariables.Gradiente.Newton.gradiente">
-<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Gradiente.Newton.</span></span><span class="sig-name descname"><span class="pre">gradiente</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funcion</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Gradiente/Newton.html#gradiente"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Gradiente.Newton.gradiente" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Gradiente.Newton.</span></span><span class="sig-name descname"><span class="pre">gradiente</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funcion</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Gradiente/Newton.html#gradiente"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Gradiente.Newton.gradiente" title="Link to this definition">¶</a></dt>
 <dd><p>Calcula el gradiente de una función en un punto dado utilizando diferencias finitas.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Example<span class="colon">:</span></dt>
@@ -336,7 +276,7 @@ búsqueda siguiente.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesMultivariables.Gradiente.Newton.hessiana">
-<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Gradiente.Newton.</span></span><span class="sig-name descname"><span class="pre">hessiana</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funcion</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Gradiente/Newton.html#hessiana"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Gradiente.Newton.hessiana" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Gradiente.Newton.</span></span><span class="sig-name descname"><span class="pre">hessiana</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funcion</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Gradiente/Newton.html#hessiana"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Gradiente.Newton.hessiana" title="Link to this definition">¶</a></dt>
 <dd><p>Calcula la matriz Hessiana de una función en un punto dado.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Example<span class="colon">:</span></dt>
@@ -369,7 +309,7 @@ búsqueda siguiente.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesMultivariables.Gradiente.Newton.newton">
-<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Gradiente.Newton.</span></span><span class="sig-name descname"><span class="pre">newton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funcion_objetivo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metodo_busqueda</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Gradiente/Newton.html#newton"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Gradiente.Newton.newton" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesMultivariables.Gradiente.Newton.</span></span><span class="sig-name descname"><span class="pre">newton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">funcion_objetivo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">metodo_busqueda</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsilon2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iterations</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesMultivariables/Gradiente/Newton.html#newton"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesMultivariables.Gradiente.Newton.newton" title="Link to this definition">¶</a></dt>
 <dd><p>Implementa el método de Newton modificado para la optimización de funciones.
 El Método de Newton es un algoritmo de optimización que busca encontrar
 raíces de funciones o mínimos de funciones derivadas.</p>
@@ -408,36 +348,83 @@ raíces de funciones o mínimos de funciones derivadas.</p>
 
 </section>
 <section id="module-FuncionesMultivariables.Gradiente">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-FuncionesMultivariables.Gradiente" title="Link to this heading"></a></h2>
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-FuncionesMultivariables.Gradiente" title="Link to this heading">¶</a></h2>
 </section>
 </section>
 
 
-           </div>
+            <div class="clearer"></div>
           </div>
-          <footer>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Derechos de autor 2024, Isabella Jimenez Bravo.</p>
-  </div>
-
-  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
-    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
         </div>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Tabla de contenido</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">FuncionesMultivariables.Gradiente package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-FuncionesMultivariables.Gradiente.Cauchy">FuncionesMultivariables.Gradiente.Cauchy module</a><ul>
+<li><a class="reference internal" href="#FuncionesMultivariables.Gradiente.Cauchy.cauchy"><code class="docutils literal notranslate"><span class="pre">cauchy()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesMultivariables.Gradiente.Cauchy.distancia_origen"><code class="docutils literal notranslate"><span class="pre">distancia_origen()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesMultivariables.Gradiente.Cauchy.gradiente"><code class="docutils literal notranslate"><span class="pre">gradiente()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-FuncionesMultivariables.Gradiente.FletcherReeves">FuncionesMultivariables.Gradiente.FletcherReeves module</a><ul>
+<li><a class="reference internal" href="#FuncionesMultivariables.Gradiente.FletcherReeves.gradiente"><code class="docutils literal notranslate"><span class="pre">gradiente()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesMultivariables.Gradiente.FletcherReeves.gradiente_conjugado"><code class="docutils literal notranslate"><span class="pre">gradiente_conjugado()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-FuncionesMultivariables.Gradiente.Newton">FuncionesMultivariables.Gradiente.Newton module</a><ul>
+<li><a class="reference internal" href="#FuncionesMultivariables.Gradiente.Newton.distancia_origen"><code class="docutils literal notranslate"><span class="pre">distancia_origen()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesMultivariables.Gradiente.Newton.gradiente"><code class="docutils literal notranslate"><span class="pre">gradiente()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesMultivariables.Gradiente.Newton.hessiana"><code class="docutils literal notranslate"><span class="pre">hessiana()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesMultivariables.Gradiente.Newton.newton"><code class="docutils literal notranslate"><span class="pre">newton()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-FuncionesMultivariables.Gradiente">Module contents</a></li>
+</ul>
+</li>
+</ul>
 
-</body>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>Esta página</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/rst/FuncionesMultivariables.Gradiente.rst.txt"
+            rel="nofollow">Mostrar el código</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Índice General"
+             >índice</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Índice de Módulos Python"
+             >módulos</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">documentación de Proyecto de optimización - 0.0.1</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FuncionesMultivariables.Gradiente package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Isabella Jimenez Bravo.
+      Creado usando <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
 </html>
