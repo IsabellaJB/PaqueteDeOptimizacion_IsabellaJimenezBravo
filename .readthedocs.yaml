@@ -1,37 +1,20 @@
-# Read the Docs configuration file for Sphinx projects
-# See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
 
-# Required
-version: 2
-
-# Set the OS, Python version and other tools you might need
-build:
-  os: ubuntu-22.04
-  tools:
-    python: "3.11"
-
-
-# Configuración para generar documentación en el directorio "docs/" con Sphinx
-sphinx:
-  builder: html
-  configuration: conf.py
-  fail_on_warning: true
-
+  # .readthedocs.yaml
+  # Read the Docs configuration file
+  # See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
   
-
-  # Puedes configurar Sphinx para usar un constructor diferente, por ejemplo, usa el constructor dirhtml para URLs más simples
-  # builder: "dirhtml"
-  # Fallar en todas las advertencias para evitar referencias rotas
-  # fail_on_warning: true
-
-# Opcionalmente genera tu documentación en formatos adicionales como PDF y ePub
-# formats:
-#   - pdf
-#   - epub
-
-# Opcional pero recomendado, declara los requisitos de Python necesarios
-# para generar tu documentación
-# Ver https://docs.readthedocs.io/en/stable/guides/reproducible-builds.html
-# python:
-#   install:
-#     - requirements: docs/requirements.txt
+  # Required
+  version: 2
+  
+  # Set the version of Python and other tools you might need
+  build:
+    os: ubuntu-22.04
+    tools:
+      python: "3.10"
+    jobs:
+      pre_build:
+        - make doc
+  
+  # Build documentation in the docs/ directory with Sphinx
+  sphinx:
+      configuration: conf.py
