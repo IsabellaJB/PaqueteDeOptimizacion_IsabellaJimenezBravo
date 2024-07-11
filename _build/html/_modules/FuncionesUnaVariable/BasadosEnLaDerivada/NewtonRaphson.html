@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="es" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson &#8212; documentación de Paquete de Optimizacion - Isabella Jimenez Bravo - 10/07/2024</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/nature.css?v=0f882399" />
+    <script src="../../../_static/documentation_options.js?v=03ef920f"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/translations.js?v=efdbd0b9"></script>
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Índice de Módulos Python"
+             >módulos</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">documentación de Paquete de Optimizacion - Isabella Jimenez Bravo - 10/07/2024</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" accesskey="U">Código de módulo</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Código fuente para FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<div class="viewcode-block" id="primera_derivada">
+<a class="viewcode-back" href="../../../rst/FuncionesUnaVariable.BasadosEnLaDerivada.html#FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson.primera_derivada">[documentos]</a>
+<span class="k">def</span> <span class="nf">primera_derivada</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">funcion</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcula la primera derivada de una función en un punto dado utilizando diferencias finitas.</span>
+<span class="sd">    </span>
+<span class="sd">    :Example:</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; def funcion(x):</span>
+<span class="sd">    ...     return x**2</span>
+<span class="sd">    &gt;&gt;&gt; x = 1.0</span>
+<span class="sd">    &gt;&gt;&gt; primera_derivada(x, funcion)</span>
+<span class="sd">    2.000000000002</span>
+<span class="sd">    </span>
+<span class="sd">    :param x: El punto en el que se calcula la derivada.</span>
+<span class="sd">    :type x: float</span>
+<span class="sd">    :param funcion: La función para la cual se calcula la derivada.</span>
+<span class="sd">    :type funcion: callable</span>
+<span class="sd">    :return: La primera derivada calculada en el punto dado.</span>
+<span class="sd">    :rtype: float</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">delta</span> <span class="o">=</span> <span class="mf">0.0001</span>
+    <span class="n">primera_parte</span> <span class="o">=</span> <span class="n">funcion</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">delta</span><span class="p">)</span>
+    <span class="n">segunda_parte</span> <span class="o">=</span> <span class="n">funcion</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">delta</span><span class="p">)</span>
+    <span class="n">parte_arriba</span> <span class="o">=</span> <span class="n">primera_parte</span> <span class="o">-</span> <span class="n">segunda_parte</span>
+    <span class="n">parte_abajo</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">delta</span>
+    <span class="n">parte_final</span> <span class="o">=</span> <span class="n">parte_arriba</span> <span class="o">/</span> <span class="n">parte_abajo</span>
+    <span class="k">return</span> <span class="n">parte_final</span></div>
+
+
+<div class="viewcode-block" id="segunda_derivada">
+<a class="viewcode-back" href="../../../rst/FuncionesUnaVariable.BasadosEnLaDerivada.html#FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson.segunda_derivada">[documentos]</a>
+<span class="k">def</span> <span class="nf">segunda_derivada</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">funcion</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcula la segunda derivada de una función en un punto dado utilizando diferencias finitas.</span>
+<span class="sd">    </span>
+<span class="sd">    :Example:</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; def funcion(x):</span>
+<span class="sd">    ...     return x**2</span>
+<span class="sd">    &gt;&gt;&gt; x = 1.0</span>
+<span class="sd">    &gt;&gt;&gt; segunda_derivada(x, funcion)</span>
+<span class="sd">    2.000000165480742</span>
+<span class="sd">    </span>
+<span class="sd">    :param x: El punto en el que se calcula la derivada.</span>
+<span class="sd">    :type x: float</span>
+<span class="sd">    :param funcion: La función para la cual se calcula la derivada.</span>
+<span class="sd">    :type funcion: callable</span>
+<span class="sd">    :return: La segunda derivada calculada en el punto dado.</span>
+<span class="sd">    :rtype: float</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">delta</span> <span class="o">=</span> <span class="mf">0.0001</span>
+    <span class="n">primera_parte</span> <span class="o">=</span> <span class="n">funcion</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">delta</span><span class="p">)</span>
+    <span class="n">segunda_parte</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">funcion</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">tercera_parte</span> <span class="o">=</span> <span class="n">funcion</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">delta</span><span class="p">)</span>
+    <span class="n">parte_arriba</span> <span class="o">=</span> <span class="n">primera_parte</span> <span class="o">-</span> <span class="n">segunda_parte</span> <span class="o">+</span> <span class="n">tercera_parte</span>
+    <span class="n">parte_abajo</span> <span class="o">=</span> <span class="n">delta</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">parte_final</span> <span class="o">=</span> <span class="n">parte_arriba</span> <span class="o">/</span> <span class="n">parte_abajo</span>
+    <span class="k">return</span> <span class="n">parte_final</span></div>
+
+
+
+<div class="viewcode-block" id="newton_raphson">
+<a class="viewcode-back" href="../../../rst/FuncionesUnaVariable.BasadosEnLaDerivada.html#FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson.newton_raphson">[documentos]</a>
+<span class="k">def</span> <span class="nf">newton_raphson</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">funcion</span><span class="p">,</span> <span class="n">epsilon</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Implementa el método de Newton-Raphson para encontrar una raíz de la función dada.</span>
+<span class="sd">    El método de Newton-Raphson es un algoritmo iterativo utilizado para encontrar </span>
+<span class="sd">    numéricamente las raíces de una función mediante la aproximación sucesiva de </span>
+<span class="sd">    un punto inicial hacia la raíz, basándose en la derivada de la función.</span>
+
+<span class="sd">    :Example:</span>
+
+<span class="sd">    &gt;&gt;&gt; def funcion(x):</span>
+<span class="sd">    ...     return x**2 - 2</span>
+<span class="sd">    &gt;&gt;&gt; x_inicial = [1.0, 2.0]</span>
+<span class="sd">    &gt;&gt;&gt; epsilon = 1e-6</span>
+<span class="sd">    &gt;&gt;&gt; newton_raphson(x_inicial, funcion, epsilon)</span>
+<span class="sd">    1.4142135623746899</span>
+
+<span class="sd">    :param x: Lista de puntos iniciales de búsqueda.</span>
+<span class="sd">    :type x: list of float</span>
+<span class="sd">    :param funcion: Función objetivo para la cual se busca la raíz.</span>
+<span class="sd">    :type funcion: callable</span>
+<span class="sd">    :param epsilon: Tolerancia de convergencia del método.</span>
+<span class="sd">    :type epsilon: float</span>
+<span class="sd">    :return: Valor aproximado de la raíz de la función.</span>
+<span class="sd">    :rtype: float</span>
+<span class="sd">    :raises ValueError: Si la longitud de x es cero o si no se alcanza la convergencia.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">x_actual</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+    <span class="n">x_derivada1</span> <span class="o">=</span> <span class="n">primera_derivada</span><span class="p">(</span><span class="n">x_actual</span><span class="p">,</span> <span class="n">funcion</span><span class="p">)</span>
+    <span class="n">x_derivada2</span> <span class="o">=</span> <span class="n">segunda_derivada</span><span class="p">(</span><span class="n">x_actual</span><span class="p">,</span> <span class="n">funcion</span><span class="p">)</span>
+    <span class="n">x_siguiente</span> <span class="o">=</span> <span class="n">x_actual</span> <span class="o">-</span> <span class="p">(</span><span class="n">x_derivada1</span> <span class="o">/</span> <span class="n">x_derivada2</span><span class="p">)</span>
+    <span class="k">while</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x_siguiente</span> <span class="o">-</span> <span class="n">x_actual</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">epsilon</span><span class="p">:</span>
+        <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">k</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">x_siguiente</span>
+        <span class="n">x_actual</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+        <span class="n">x_derivada1</span> <span class="o">=</span> <span class="n">primera_derivada</span><span class="p">(</span><span class="n">x_actual</span><span class="p">,</span> <span class="n">funcion</span><span class="p">)</span>
+        <span class="n">x_derivada2</span> <span class="o">=</span> <span class="n">segunda_derivada</span><span class="p">(</span><span class="n">x_actual</span><span class="p">,</span> <span class="n">funcion</span><span class="p">)</span>
+        <span class="n">x_siguiente</span> <span class="o">=</span> <span class="n">x_actual</span> <span class="o">-</span> <span class="p">(</span><span class="n">x_derivada1</span> <span class="o">/</span> <span class="n">x_derivada2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x_siguiente</span></div>
+
+</pre></div>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Índice General"
+             >índice</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Índice de Módulos Python"
+             >módulos</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">documentación de Paquete de Optimizacion - Isabella Jimenez Bravo - 10/07/2024</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Código de módulo</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FuncionesUnaVariable.BasadosEnLaDerivada.NewtonRaphson</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Isabella Jimenez Bravo.
+      Creado usando <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>

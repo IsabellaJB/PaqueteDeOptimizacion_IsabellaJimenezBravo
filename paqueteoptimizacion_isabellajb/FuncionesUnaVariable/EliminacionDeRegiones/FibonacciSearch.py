@@ -4,14 +4,25 @@ def fibonacci_search(funcion, epsilon, a, b):
     """
     Implementación del método de búsqueda utilizando la secuencia de Fibonacci para minimización de funciones.
 
-    Parameters:
-    funcion (callable): Función objetivo que se desea minimizar.
-    epsilon (float): Precisión deseada para la aproximación del mínimo.
-    a (float): Límite inferior del intervalo de búsqueda.
-    b (float): Límite superior del intervalo de búsqueda.
+    Usa todas las capacidades de Sphinx en esta descripción, por ejemplo, para dar
+    ejemplos de uso ...
 
-    Returns:
-    float: Punto donde se estima que se encuentra el mínimo de la función.
+    :Ejemplo:
+
+    >>> fibonacci_search(lambda x: x**2, 0.01, -1, 1)
+    0.0
+
+    :param funcion: Función objetivo que se desea minimizar.
+    :type funcion: callable
+    :param epsilon: Precisión deseada para la aproximación del mínimo.
+    :type epsilon: float
+    :param a: Límite inferior del intervalo de búsqueda.
+    :type a: float
+    :param b: Límite superior del intervalo de búsqueda.
+    :type b: float
+    :return: Punto donde se estima que se encuentra el mínimo de la función.
+    :rtype: float
+    :raises ValueError: Si el intervalo no está correctamente definido.
     """
     
     fibs = [0, 1]

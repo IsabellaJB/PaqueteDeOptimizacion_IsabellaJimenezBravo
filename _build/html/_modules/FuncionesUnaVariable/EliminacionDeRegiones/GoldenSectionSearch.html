@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="es" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch &#8212; documentación de Paquete de Optimizacion - Isabella Jimenez Bravo - 10/07/2024</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/nature.css?v=0f882399" />
+    <script src="../../../_static/documentation_options.js?v=03ef920f"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/translations.js?v=efdbd0b9"></script>
+    <link rel="index" title="Índice" href="../../../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../../../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Índice de Módulos Python"
+             >módulos</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">documentación de Paquete de Optimizacion - Isabella Jimenez Bravo - 10/07/2024</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" accesskey="U">Código de módulo</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Código fuente para FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<div class="viewcode-block" id="regla_eliminacion">
+<a class="viewcode-back" href="../../../rst/FuncionesUnaVariable.EliminacionDeRegiones.html#FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch.regla_eliminacion">[documentos]</a>
+<span class="k">def</span> <span class="nf">regla_eliminacion</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">fx1</span><span class="p">,</span> <span class="n">fx2</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Regla de eliminación utilizada en la búsqueda dorada.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    x1 (float): Primer punto de comparación.</span>
+<span class="sd">    x2 (float): Segundo punto de comparación.</span>
+<span class="sd">    fx1 (float): Valor de la función en x1.</span>
+<span class="sd">    fx2 (float): Valor de la función en x2.</span>
+<span class="sd">    a (float): Límite inferior del intervalo de búsqueda.</span>
+<span class="sd">    b (float): Límite superior del intervalo de búsqueda.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    tuple: Nuevo intervalo de búsqueda (a, b).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">fx1</span> <span class="o">&gt;</span> <span class="n">fx2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x1</span><span class="p">,</span> <span class="n">b</span>
+    <span class="k">if</span> <span class="n">fx1</span> <span class="o">&lt;</span> <span class="n">fx2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="n">x2</span>
+    <span class="k">return</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span></div>
+
+
+<div class="viewcode-block" id="w_to_x">
+<a class="viewcode-back" href="../../../rst/FuncionesUnaVariable.EliminacionDeRegiones.html#FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch.w_to_x">[documentos]</a>
+<span class="k">def</span> <span class="nf">w_to_x</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convierte un punto w en el intervalo [0, 1] al intervalo [a, b].</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    w (float): Punto en el intervalo [0, 1].</span>
+<span class="sd">    a (float): Límite inferior del intervalo de búsqueda.</span>
+<span class="sd">    b (float): Límite superior del intervalo de búsqueda.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    float: Punto convertido en el intervalo [a, b].</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">w</span> <span class="o">*</span> <span class="p">(</span><span class="n">b</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span> <span class="o">+</span> <span class="n">a</span></div>
+
+
+<div class="viewcode-block" id="busqueda_dorada">
+<a class="viewcode-back" href="../../../rst/FuncionesUnaVariable.EliminacionDeRegiones.html#FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch.busqueda_dorada">[documentos]</a>
+<span class="k">def</span> <span class="nf">busqueda_dorada</span><span class="p">(</span><span class="n">funcion</span><span class="p">,</span> <span class="n">epsilon</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Implementación del método de búsqueda por la razón áurea (Golden Section Search) para minimización de funciones.</span>
+
+<span class="sd">    Usa todas las capacidades de Sphinx en esta descripción, por ejemplo, para dar</span>
+<span class="sd">    ejemplos de uso ...</span>
+
+<span class="sd">    :Ejemplo:</span>
+
+<span class="sd">    &gt;&gt;&gt; busqueda_dorada(lambda x: x**2, 0.01, -1, 1)</span>
+<span class="sd">    0.0</span>
+
+<span class="sd">    :param funcion: Función objetivo que se desea minimizar.</span>
+<span class="sd">    :type funcion: callable</span>
+<span class="sd">    :param epsilon: Precisión deseada para la aproximación del mínimo.</span>
+<span class="sd">    :type epsilon: float</span>
+<span class="sd">    :param a: Límite inferior del intervalo de búsqueda.</span>
+<span class="sd">    :type a: float</span>
+<span class="sd">    :param b: Límite superior del intervalo de búsqueda.</span>
+<span class="sd">    :type b: float</span>
+<span class="sd">    :return: Punto donde se estima que se encuentra el mínimo de la función.</span>
+<span class="sd">    :rtype: float</span>
+<span class="sd">    :raises ValueError: Si el intervalo no está correctamente definido.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">PHI</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">aw</span><span class="p">,</span> <span class="n">bw</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="n">Lw</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">while</span> <span class="n">Lw</span> <span class="o">&gt;</span> <span class="n">epsilon</span><span class="p">:</span>
+        <span class="n">w2</span> <span class="o">=</span> <span class="n">aw</span> <span class="o">+</span> <span class="n">PHI</span> <span class="o">*</span> <span class="n">Lw</span>
+        <span class="n">w1</span> <span class="o">=</span> <span class="n">bw</span> <span class="o">-</span> <span class="n">PHI</span> <span class="o">*</span> <span class="n">Lw</span>
+        <span class="n">aw</span><span class="p">,</span> <span class="n">bw</span> <span class="o">=</span> <span class="n">regla_eliminacion</span><span class="p">(</span><span class="n">w1</span><span class="p">,</span> <span class="n">w2</span><span class="p">,</span> <span class="n">funcion</span><span class="p">(</span><span class="n">w_to_x</span><span class="p">(</span><span class="n">w1</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)),</span> <span class="n">funcion</span><span class="p">(</span><span class="n">w_to_x</span><span class="p">(</span><span class="n">w2</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)),</span> <span class="n">aw</span><span class="p">,</span> <span class="n">bw</span><span class="p">)</span>
+        <span class="n">k</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">Lw</span> <span class="o">=</span> <span class="n">bw</span> <span class="o">-</span> <span class="n">aw</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">w_to_x</span><span class="p">(</span><span class="n">aw</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="n">w_to_x</span><span class="p">(</span><span class="n">bw</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span> <span class="o">/</span> <span class="mi">2</span></div>
+
+</pre></div>
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="Índice General"
+             >índice</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Índice de Módulos Python"
+             >módulos</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">documentación de Paquete de Optimizacion - Isabella Jimenez Bravo - 10/07/2024</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >Código de módulo</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Isabella Jimenez Bravo.
+      Creado usando <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>
