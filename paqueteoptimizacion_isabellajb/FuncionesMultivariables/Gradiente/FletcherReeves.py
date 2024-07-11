@@ -1,15 +1,29 @@
 import numpy as np
 import math
 
-# ---------------------------------- FUNCION OBJETIVO ---------------------------------- 
-def funcion_objetivo(arreglo):
-    x = arreglo[0]
-    y = arreglo[1]
-    operacion = ((x**2 + y - 11)**2) + ((x + y**2 - 7)**2)
-    return operacion
 
 # ---------------------------------- GRADIENTE ---------------------------------- 
 def gradiente(funcion, x, delta=0.001):
+    """
+    Calcula el gradiente de una función en un punto dado utilizando diferencias finitas.
+
+    :Example:
+
+    >>> def funcion(x):
+    ...     return sum(xi**2 for xi in x)
+    >>> x = np.array([1.0, 2.0])
+    >>> gradiente(funcion, x)
+    array([2.001, 4.001])
+
+    :param funcion: La función objetivo cuya derivada se desea calcular.
+    :type funcion: callable
+    :param x: El punto en el que se desea calcular el gradiente.
+    :type x: ndarray
+    :param delta: El tamaño del paso para calcular las diferencias finitas. Default es 0.001.
+    :type delta: float, optional
+    :return: El gradiente calculado en el punto dado.
+    :rtype: ndarray
+    """
     derivadas = []
     for i in range(len(x)):
         copia = x.copy()
@@ -32,16 +46,30 @@ def gradiente_conjugado(f_o, x0, metodo_busqueda, e1=1e-6, e2=1e-6, e3=1e-6):
     la iteración actual como la de iteraciones previas para calcular la dirección de 
     búsqueda siguiente.
 
-    Parameters:
-    f_o (callable): La función objetivo a minimizar.
-    x0 (ndarray): Punto inicial de búsqueda.
-    metodo_busqueda (callable): Método de búsqueda para calcular el paso alpha.
-    e1 (float): Tolerancia para la búsqueda de línea. Default es 1e-6.
-    e2 (float): Tolerancia para la condición de convergencia basada en la diferencia relativa. Default es 1e-6.
-    e3 (float): Tolerancia para la condición de convergencia basada en la norma del gradiente. Default es 1e-6.
+    :Example:
 
-    Returns:
-    ndarray: Punto óptimo encontrado.
+    >>> def f_o(x):
+    ...     return sum(xi**2 for xi in x)
+    >>> def metodo_busqueda(alpha_funcion, e1, a, b):
+    ...     return 0.1  # Dummy implementation for example
+    >>> x0 = np.array([1.0, 1.0])
+    >>> gradiente_conjugado(f_o, x0, metodo_busqueda)
+    array([0., 0.])
+
+    :param f_o: La función objetivo a minimizar.
+    :type f_o: callable
+    :param x0: Punto inicial de búsqueda.
+    :type x0: ndarray
+    :param metodo_busqueda: Método de búsqueda para calcular el paso alpha.
+    :type metodo_busqueda: callable
+    :param e1: Tolerancia para la búsqueda de línea. Default es 1e-6.
+    :type e1: float, optional
+    :param e2: Tolerancia para la condición de convergencia basada en la diferencia relativa. Default es 1e-6.
+    :type e2: float, optional
+    :param e3: Tolerancia para la condición de convergencia basada en la norma del gradiente. Default es 1e-6.
+    :type e3: float, optional
+    :return: Punto óptimo encontrado.
+    :rtype: ndarray
     """
 
     x = x0

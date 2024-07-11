@@ -1,6 +1,24 @@
 import numpy as np
 
 def primera_derivada(x, funcion):
+    """
+    Calcula la primera derivada de una función en un punto dado utilizando diferencias finitas.
+    
+    :Example:
+    
+    >>> def funcion(x):
+    ...     return x**2
+    >>> x = 1.0
+    >>> primera_derivada(x, funcion)
+    2.000000000002
+    
+    :param x: El punto en el que se calcula la derivada.
+    :type x: float
+    :param funcion: La función para la cual se calcula la derivada.
+    :type funcion: callable
+    :return: La primera derivada calculada en el punto dado.
+    :rtype: float
+    """
     delta = 0.0001
     primera_parte = funcion(x + delta)
     segunda_parte = funcion(x - delta)
@@ -10,6 +28,24 @@ def primera_derivada(x, funcion):
     return parte_final
 
 def segunda_derivada(x, funcion):
+    """
+    Calcula la segunda derivada de una función en un punto dado utilizando diferencias finitas.
+    
+    :Example:
+    
+    >>> def funcion(x):
+    ...     return x**2
+    >>> x = 1.0
+    >>> segunda_derivada(x, funcion)
+    2.000000165480742
+    
+    :param x: El punto en el que se calcula la derivada.
+    :type x: float
+    :param funcion: La función para la cual se calcula la derivada.
+    :type funcion: callable
+    :return: La segunda derivada calculada en el punto dado.
+    :rtype: float
+    """
     delta = 0.0001
     primera_parte = funcion(x + delta)
     segunda_parte = 2 * funcion(x)
@@ -22,6 +58,26 @@ def segunda_derivada(x, funcion):
 
 
 def z(x1, x2, funcion):
+    """
+    Calcula el siguiente punto de aproximación en el método de la secante.
+    
+    :Example:
+    
+    >>> def funcion(x):
+    ...     return x**2 - 4
+    >>> x1, x2 = 1.0, 3.0
+    >>> z(x1, x2, funcion)
+    2.090909090909091
+    
+    :param x1: Primer punto de evaluación.
+    :type x1: float
+    :param x2: Segundo punto de evaluación.
+    :type x2: float
+    :param funcion: La función objetivo.
+    :type funcion: callable
+    :return: El siguiente punto de aproximación.
+    :rtype: float
+    """
     parte_arriba = primera_derivada(x2,funcion)
 
     primera_parte = (primera_derivada(x2,funcion)) - (primera_derivada(x1,funcion))
@@ -43,16 +99,28 @@ def metodo_secante(x_inicial, funcion, epsilon, iter_max=100):
     El método de la secante es un algoritmo numérico iterativo para encontrar 
     las raíces de una función no lineal. A diferencia del método de Newton-Raphson, 
     no requiere la evaluación de la derivada de la función en cada paso, haciendo 
-    el cálculo de la derivada menos crítico. 
+    el cálculo de la derivada menos crítico.
 
-    Parameters:
-    x_inicial (tuple): Tupla con los dos puntos iniciales para comenzar el método.
-    funcion (callable): Función objetivo.
-    epsilon (float): Tolerancia para la convergencia del método.
-    iter_max (int, optional): Número máximo de iteraciones permitidas. Default es 100.
+    :Example:
 
-    Returns:
-    float: Aproximación de la raíz encontrada.
+    >>> def funcion(x):
+    ...     return x**3 - x - 2
+    >>> x_inicial = (1.0, 2.0)
+    >>> epsilon = 1e-6
+    >>> metodo_secante(x_inicial, funcion, epsilon)
+    1.5213797068045676
+
+    :param x_inicial: Tupla con los dos puntos iniciales para comenzar el método.
+    :type x_inicial: tuple
+    :param funcion: Función objetivo.
+    :type funcion: callable
+    :param epsilon: Tolerancia para la convergencia del método.
+    :type epsilon: float
+    :param iter_max: Número máximo de iteraciones permitidas. Default es 100.
+    :type iter_max: int, optional
+    :return: Aproximación de la raíz encontrada.
+    :rtype: float
+    :raises: ValueError si el método no converge después de iter_max iteraciones.
     """
 
     x1 = x_inicial[0]

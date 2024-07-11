@@ -1,13 +1,17 @@
-"""
-Bounding Phase Method
----------------------
-Este módulo contiene la implementación del método de fases de acotamiento
-para la optimización de funciones unimodales.
-"""
-
 import numpy as np
 
 def deltas(a, b, n):
+    """
+    Calculates the difference quotient between two numbers.
+
+    Parameters:
+    a (float): First number.
+    b (float): Second number.
+    n (int): Number of intervals.
+
+    Returns:
+    float: Difference quotient.
+    """
     return ((b - a) / n)
 
 def busqueda_exhaustiva(x, funcion, precision):

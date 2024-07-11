@@ -1,15 +1,29 @@
 import numpy as np
 import math
 
-# ---------------------------------- FUNCION OBJETIVO ---------------------------------- 
-def funcion_objetivo(arreglo):
-    x = arreglo[0]
-    y = arreglo[1]
-    operacion = ((x**2 + y - 11)**2) + ((x + y**2 - 7)**2)
-    return operacion
 
 # ---------------------------------- GRADIENTE ---------------------------------- 
 def gradiente(funcion, x, delta=0.001):
+    """
+    Calcula el gradiente de una función en un punto dado utilizando diferencias finitas.
+
+    :Example:
+
+    >>> def funcion(x):
+    ...     return sum(xi**2 for xi in x)
+    >>> x = np.array([1.0, 2.0])
+    >>> gradiente(funcion, x)
+    array([2.001, 4.001])
+
+    :param funcion: La función objetivo cuya derivada se desea calcular.
+    :type funcion: callable
+    :param x: El punto en el que se desea calcular el gradiente.
+    :type x: ndarray
+    :param delta: El tamaño del paso para calcular las diferencias finitas. Default es 0.001.
+    :type delta: float, optional
+    :return: El gradiente calculado en el punto dado.
+    :rtype: ndarray
+    """
     derivadas = []
     for i in range(len(x)):
         copia = x.copy()
@@ -23,6 +37,27 @@ def gradiente(funcion, x, delta=0.001):
 
 # ---------------------------------- HESSIANA ---------------------------------- 
 def hessiana(funcion, x, delta=0.001):
+    """
+    Calcula la matriz Hessiana de una función en un punto dado.
+    
+    :Example:
+    
+    >>> def funcion(x):
+    ...     return x[0]**2 + x[1]**2
+    >>> x = np.array([1.0, 2.0])
+    >>> hessiana(funcion, x)
+    array([[2., 0.],
+           [0., 2.]])
+
+    :param funcion: La función para la cual se calcula la Hessiana.
+    :type funcion: callable
+    :param x: El punto en el que se calcula la Hessiana.
+    :type x: ndarray
+    :param delta: El tamaño del paso para el cálculo de diferencias finitas. Default es 0.001.
+    :type delta: float, optional
+    :return: La matriz Hessiana calculada.
+    :rtype: ndarray
+    """
     n = len(x)
     matriz = np.zeros((n, n))
     for i in range(n):
@@ -65,6 +100,20 @@ def hessiana(funcion, x, delta=0.001):
 
 # ---------------------------------- DISTANCIA ORIGEN ---------------------------------- 
 def distancia_origen(vector):
+    """
+    Calcula la distancia de un vector al origen.
+    
+    :Example:
+    
+    >>> vector = np.array([3, 4])
+    >>> distancia_origen(vector)
+    5.0
+
+    :param vector: El vector del cual se calculará la distancia.
+    :type vector: ndarray
+    :return: La distancia del vector al origen.
+    :rtype: float
+    """
     return np.linalg.norm(vector)
 
 # ---------------------------------- MÉTODO DE NEWTON MODIFICADO ---------------------------------- 
@@ -74,16 +123,30 @@ def newton(funcion_objetivo, x0, metodo_busqueda, epsilon1=1e-6, epsilon2=1e-6, 
     El Método de Newton es un algoritmo de optimización que busca encontrar 
     raíces de funciones o mínimos de funciones derivadas.
 
-    Parameters:
-    funcion_objetivo (callable): Función objetivo a minimizar.
-    x0 (list): Punto inicial de búsqueda.
-    metodo_busqueda (callable): Método de búsqueda para calcular el paso alpha.
-    epsilon1 (float): Tolerancia para la norma del gradiente. Default es 1e-6.
-    epsilon2 (float): Tolerancia para la diferencia relativa entre iteraciones sucesivas. Default es 1e-6.
-    max_iterations (int): Número máximo de iteraciones permitidas. Default es 100.
+    :Example:
 
-    Returns:
-    ndarray: Punto óptimo encontrado.
+    >>> def funcion_objetivo(x):
+    ...     return x[0]**2 + x[1]**2
+    >>> def metodo_busqueda(alpha_funcion, epsilon2, a, b):
+    ...     return 0.1  # Implementación dummy para el ejemplo
+    >>> x0 = [1.0, 1.0]
+    >>> newton(funcion_objetivo, x0, metodo_busqueda)
+    array([0., 0.])
+
+    :param funcion_objetivo: Función objetivo a minimizar.
+    :type funcion_objetivo: callable
+    :param x0: Punto inicial de búsqueda.
+    :type x0: list
+    :param metodo_busqueda: Método de búsqueda para calcular el paso alpha.
+    :type metodo_busqueda: callable
+    :param epsilon1: Tolerancia para la norma del gradiente. Default es 1e-6.
+    :type epsilon1: float, optional
+    :param epsilon2: Tolerancia para la diferencia relativa entre iteraciones sucesivas. Default es 1e-6.
+    :type epsilon2: float, optional
+    :param max_iterations: Número máximo de iteraciones permitidas. Default es 100.
+    :type max_iterations: int, optional
+    :return: Punto óptimo encontrado.
+    :rtype: ndarray
     """
 
     terminar = False
@@ -121,10 +184,8 @@ def newton(funcion_objetivo, x0, metodo_busqueda, epsilon1=1e-6, epsilon2=1e-6, 
                 k += 1
                 xk = x_k1
         
-        # print(f"Iteración {k+1}: x = {xk}, f(x) = {funcion_objetivo(xk)}")
 
     if k < max_iterations:
-        # print('\n')
         print(f"Convergencia alcanzada en {k+1} iteraciones")
     else:
         print("El método no convergió")

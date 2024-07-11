@@ -1,7 +1,0 @@
-PaqueteDeOptimizacion_IsabellaJimenezBravo
-==========================================
-
-.. toctree::
-   :maxdepth: 4
-
-   setup

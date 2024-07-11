@@ -2,6 +2,24 @@ import numpy as np
 
 
 def primera_derivada(x, funcion):
+    """
+    Calcula la primera derivada de una función en un punto dado utilizando diferencias finitas.
+    
+    :Example:
+    
+    >>> def funcion(x):
+    ...     return x**2
+    >>> x = 1.0
+    >>> primera_derivada(x, funcion)
+    2.000000000002
+    
+    :param x: El punto en el que se calcula la derivada.
+    :type x: float
+    :param funcion: La función para la cual se calcula la derivada.
+    :type funcion: callable
+    :return: La primera derivada calculada en el punto dado.
+    :rtype: float
+    """
     delta = 0.0001
     primera_parte = funcion(x + delta)
     segunda_parte = funcion(x - delta)
@@ -10,7 +28,28 @@ def primera_derivada(x, funcion):
     parte_final = parte_arriba / parte_abajo
     return parte_final
 
+
+
+
 def segunda_derivada(x, funcion):
+    """
+    Calcula la segunda derivada de una función en un punto dado utilizando diferencias finitas.
+    
+    :Example:
+    
+    >>> def funcion(x):
+    ...     return x**2
+    >>> x = 1.0
+    >>> segunda_derivada(x, funcion)
+    2.000000165480742
+    
+    :param x: El punto en el que se calcula la derivada.
+    :type x: float
+    :param funcion: La función para la cual se calcula la derivada.
+    :type funcion: callable
+    :return: La segunda derivada calculada en el punto dado.
+    :rtype: float
+    """
     delta = 0.0001
     primera_parte = funcion(x + delta)
     segunda_parte = 2 * funcion(x)
@@ -29,13 +68,23 @@ def metodo_biseccion(x, funcion, epsilon):
     donde la raíz probablemente se encuentra, hasta que el intervalo sea lo 
     suficientemente pequeño o se alcance una precisión especificada.
 
-    Parameters:
-    x (tuple): Intervalo inicial [a, b] donde se busca la raíz.
-    funcion (callable): Función objetivo.
-    epsilon (float): Tolerancia para la convergencia del método.
+    :Example:
 
-    Returns:
-    float: Aproximación de la raíz encontrada.
+    >>> def funcion(x):
+    ...     return x**3 - x - 2
+    >>> x = (-2, 2)
+    >>> epsilon = 1e-6
+    >>> metodo_biseccion(x, funcion, epsilon)
+    1.5213797092437744
+
+    :param x: Intervalo inicial [a, b] donde se busca la raíz.
+    :type x: tuple
+    :param funcion: Función objetivo.
+    :type funcion: callable
+    :param epsilon: Tolerancia para la convergencia del método.
+    :type epsilon: float
+    :return: Aproximación de la raíz encontrada.
+    :rtype: float
     """
 
     a_original = x[0]

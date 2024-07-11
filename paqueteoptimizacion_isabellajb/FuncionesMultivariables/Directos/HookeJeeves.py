@@ -3,14 +3,24 @@ import numpy as np
 def exploratory_move(x, deltas, objective_function):
     """
     Realiza un movimiento exploratorio en el espacio de búsqueda.
-    
-    Parameters:
-    x (list): El punto actual.
-    deltas (list): Los tamaños de paso para cada dimensión.
-    objective_function (callable): La función objetivo a minimizar.
-    
-    Returns:
-    list: El mejor punto encontrado durante la exploración.
+
+    :Example:
+
+    >>> def objective_function(x):
+    ...     return sum(xi**2 for xi in x)
+    >>> x = [0, 0]
+    >>> deltas = [1, 1]
+    >>> exploratory_move(x, deltas, objective_function)
+    [1, 0]
+
+    :param x: El punto actual.
+    :type x: list
+    :param deltas: Los tamaños de paso para cada dimensión.
+    :type deltas: list
+    :param objective_function: La función objetivo a minimizar.
+    :type objective_function: callable
+    :return: El mejor punto encontrado durante la exploración.
+    :rtype: list
     """
     n = len(x)
     best_x = x[:]
@@ -30,34 +40,64 @@ def exploratory_move(x, deltas, objective_function):
             best_value = new_value
     return best_x
 
+
+
+
 def pattern_move(xk, xk_1):
     """
     Realiza un movimiento de patrón en el espacio de búsqueda.
-    
-    Parameters:
-    xk (list): El punto actual.
-    xk_1 (list): El punto anterior.
-    
-    Returns:
-    list: El nuevo punto obtenido mediante el movimiento de patrón.
+
+    :Example:
+
+    >>> xk = [1, 2]
+    >>> xk_1 = [0, 1]
+    >>> pattern_move(xk, xk_1)
+    [2, 3]
+
+    :param xk: El punto actual.
+    :type xk: list
+    :param xk_1: El punto anterior.
+    :type xk_1: list
+    :return: El nuevo punto obtenido mediante el movimiento de patrón.
+    :rtype: list
     """
     return [xk[i] + (xk[i] - xk_1[i]) for i in range(len(xk))]
+
+
+
+
+
+
 
 def hooke_jeeves(x0, deltas, alpha, epsilon, objective_function):
     """
     Realiza la optimización usando el método de Hooke y Jeeves. El método de 
     Hooke-Jeeves es un algoritmo de optimización directa utilizado para encontrar 
-    el mínimo de una función objetivo sin necesidad de derivadas
-    
-    Parameters:
-    x0 (list): El punto inicial de la búsqueda.
-    deltas (list): Los tamaños de paso iniciales para cada dimensión.
-    alpha (float): El factor de reducción para los tamaños de paso.
-    epsilon (float): La tolerancia para la convergencia.
-    objective_function (callable): La función objetivo a minimizar.
-    
-    Returns:
-    list: El punto óptimo encontrado.
+    el mínimo de una función objetivo sin necesidad de derivadas.
+
+    :Example:
+
+    >>> def objective_function(x):
+    ...     return sum(xi**2 for xi in x)
+    >>> x0 = [0, 0]
+    >>> deltas = [1, 1]
+    >>> alpha = 2
+    >>> epsilon = 0.01
+    >>> hooke_jeeves(x0, deltas, alpha, epsilon, objective_function)
+    [0, 0]
+
+    :param x0: El punto inicial de la búsqueda.
+    :type x0: list
+    :param deltas: Los tamaños de paso iniciales para cada dimensión.
+    :type deltas: list
+    :param alpha: El factor de reducción para los tamaños de paso.
+    :type alpha: float
+    :param epsilon: La tolerancia para la convergencia.
+    :type epsilon: float
+    :param objective_function: La función objetivo a minimizar.
+    :type objective_function: callable
+    :return: El punto óptimo encontrado.
+    :rtype: list
     """
 
     xk = x0[:]
