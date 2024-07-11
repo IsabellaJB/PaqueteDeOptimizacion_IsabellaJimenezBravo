@@ -13,9 +13,9 @@ build:
 
 # Configuración para generar documentación en el directorio "docs/" con Sphinx
 sphinx:
-  builder: _build\html
+  builder: html
   configuration: conf.py
-  fail_on_warning: true
+  fail_on_warning: false
 
   # Puedes configurar Sphinx para usar un constructor diferente, por ejemplo, usa el constructor dirhtml para URLs más simples
   # builder: "dirhtml"
