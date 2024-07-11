@@ -15,7 +15,9 @@ build:
 sphinx:
   builder: html
   configuration: conf.py
-  fail_on_warning: false
+  fail_on_warning: true
+
+  
 
   # Puedes configurar Sphinx para usar un constructor diferente, por ejemplo, usa el constructor dirhtml para URLs más simples
   # builder: "dirhtml"
