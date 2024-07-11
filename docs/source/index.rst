@@ -79,10 +79,9 @@ Instalación
 
 Para instalar el paquete, puedes usar el siguiente comando:
 
-``pip install -i https://test.pypi.org/simple/ primer-paquete-ux-isa-3``
+``pip install paqueteoptimizacion-isabellajb==0.0.1``
 
 Link de donde obtener más información del paquete: 
-https://test.pypi.org/project/primer-paquete-ux-isa-3/
-
+https://pypi.org/project/paqueteoptimizacion-isabellajb/0.0.1/
 
 

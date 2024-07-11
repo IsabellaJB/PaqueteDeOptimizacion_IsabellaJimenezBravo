@@ -14,7 +14,7 @@ setup(
     long_description=LONG_DESCRIPTION,
     packages=find_packages(),
     install_requires=[''],  
-    keywords=['python', 'optimizacion', 'funciones multivariables', 'funciones de una sola variables'],
+    keywords=['python', 'optimizacion', 'multivariables', 'variable'],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Education",
