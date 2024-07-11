@@ -28,6 +28,7 @@ Bienvenidos a la documentación del paquete: PaqueteDeOptimizacion_IsabellaJimen
 
    FuncionesMultivariables
    FuncionesUnaVariable
+   FuncionesPrueba
    modules
 
 Indices and tables
