@@ -73,5 +73,3 @@ Ejemplo de uso
     print(f"Resultado Golden: {solucion_golden}")
 
 
-
-
