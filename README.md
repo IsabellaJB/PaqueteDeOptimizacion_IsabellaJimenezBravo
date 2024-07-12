@@ -14,7 +14,6 @@ Bienvenido a la documentación del paquete de optimización `paqueteoptimizacion
 - [Estructura del Paquete](#estructura-del-paquete)
 - [Instalación](#instalación)
 - [Ejemplo de Uso](#ejemplo-de-uso)
-- [Índices y Tablas](#índices-y-tablas)
 
 ## Introducción
 
