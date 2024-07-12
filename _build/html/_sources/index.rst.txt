@@ -49,9 +49,29 @@ Instalación
 
 Para instalar el paquete, puedes usar el siguiente comando:
 
-``pip install paqueteoptimizacion-isabellajb-1-2==0.0.1``
+``pip install paqueteoptimizacion-isabella==0.0.1``
 
 Link de donde obtener más información del paquete: 
-https://pypi.org/project/paqueteoptimizacion-isabellajb-1-2/0.0.1/
+https://pypi.org/project/paqueteoptimizacion-isabella/0.0.1/
+
+
+
+Ejemplo de uso
+--------------
+
+.. code-block:: python
+
+    import numpy as np
+    from paqueteoptimizacion_isabella.FuncionesMultivariables.Gradiente.Newton import newton
+    from paqueteoptimizacion_isabella.FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch import busqueda_dorada
+    from paqueteoptimizacion_isabella.FuncionesPrueba.Multivariables.multi import himmelblaus
+
+    x0 = np.array([2, 1])
+
+    solucion_golden = newton(himmelblaus, x0, busqueda_dorada)
+
+    print(f"Resultado Golden: {solucion_golden}")
+
+
 
 

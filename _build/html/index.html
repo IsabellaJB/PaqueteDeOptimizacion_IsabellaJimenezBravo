@@ -71,9 +71,24 @@
 <section id="instalacion">
 <h2>Instalación<a class="headerlink" href="#instalacion" title="Link to this heading">¶</a></h2>
 <p>Para instalar el paquete, puedes usar el siguiente comando:</p>
-<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">paqueteoptimizacion-isabellajb-1-2==0.0.1</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">paqueteoptimizacion-isabella==0.0.1</span></code></p>
 <p>Link de donde obtener más información del paquete:
-<a class="reference external" href="https://pypi.org/project/paqueteoptimizacion-isabellajb-1-2/0.0.1/">https://pypi.org/project/paqueteoptimizacion-isabellajb-1-2/0.0.1/</a></p>
+<a class="reference external" href="https://pypi.org/project/paqueteoptimizacion-isabella/0.0.1/">https://pypi.org/project/paqueteoptimizacion-isabella/0.0.1/</a></p>
+</section>
+<section id="ejemplo-de-uso">
+<h2>Ejemplo de uso<a class="headerlink" href="#ejemplo-de-uso" title="Link to this heading">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">paqueteoptimizacion_isabella.FuncionesMultivariables.Gradiente.Newton</span> <span class="kn">import</span> <span class="n">newton</span>
+<span class="kn">from</span> <span class="nn">paqueteoptimizacion_isabella.FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch</span> <span class="kn">import</span> <span class="n">busqueda_dorada</span>
+<span class="kn">from</span> <span class="nn">paqueteoptimizacion_isabella.FuncionesPrueba.Multivariables.multi</span> <span class="kn">import</span> <span class="n">himmelblaus</span>
+
+<span class="n">x0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="n">solucion_golden</span> <span class="o">=</span> <span class="n">newton</span><span class="p">(</span><span class="n">himmelblaus</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">busqueda_dorada</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Resultado Golden: </span><span class="si">{</span><span class="n">solucion_golden</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -92,6 +107,7 @@
 <li><a class="reference internal" href="#introduccion">Introducción</a></li>
 <li><a class="reference internal" href="#estructura-del-paquete">Estructura del Paquete</a></li>
 <li><a class="reference internal" href="#instalacion">Instalación</a></li>
+<li><a class="reference internal" href="#ejemplo-de-uso">Ejemplo de uso</a></li>
 </ul>
 </li>
 </ul>
