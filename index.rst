@@ -23,7 +23,7 @@ Indices and tables
 Introducción
 ------------------
 
-Bienvenidos a la documentación oficial del paquete **paqueteoptimizacion_isabellajb_1_2**. Este paquete ha sido desarrollado para proporcionar una colección de funciones de optimización tanto para problemas de una variable como de múltiples variables.
+Bienvenidos a la documentación oficial del paquete **paqueteoptimizacion_isabella**. Este paquete ha sido desarrollado para proporcionar una colección de funciones de optimización tanto para problemas de una variable como de múltiples variables.
 
 
 
