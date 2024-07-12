@@ -41,3 +41,5 @@ extensions = [
 ]
 
 
+html_static_path = ['_static']
+html_output_path = os.getenv('READTHEDOCS_OUTPUT', default='_build') + '/html'
