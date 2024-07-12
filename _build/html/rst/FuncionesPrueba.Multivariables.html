@@ -1,49 +1,116 @@
 <!DOCTYPE html>
+<html class="writer-html5" lang="es" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<html lang="es" data-content_root="../">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FuncionesPrueba.Multivariables package &mdash; documentación de Proyecto de optimización - 0.0.1</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
-    <title>FuncionesPrueba.Multivariables package &#8212; documentación de Proyecto de optimización - 0.0.1</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=0f882399" />
-    <script src="../_static/documentation_options.js?v=6fcc102b"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=efdbd0b9"></script>
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=6fcc102b"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/translations.js?v=efdbd0b9"></script>
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" /> 
-  </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navegación</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="Índice General"
-             accesskey="I">índice</a></li>
-        <li class="right" >
-          <a href="../py-modindex.html" title="Índice de Módulos Python"
-             >módulos</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">documentación de Proyecto de optimización - 0.0.1</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">FuncionesPrueba.Multivariables package</a></li> 
-      </ul>
-    </div>  
+</head>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Proyecto de optimización
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" aria-label="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">FuncionesPrueba.Multivariables package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-FuncionesPrueba.Multivariables.multi">FuncionesPrueba.Multivariables.multi module</a><ul>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.Rastrigin"><code class="docutils literal notranslate"><span class="pre">Rastrigin()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.Rosenbrock"><code class="docutils literal notranslate"><span class="pre">Rosenbrock()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.ackley_function"><code class="docutils literal notranslate"><span class="pre">ackley_function()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.beale_function"><code class="docutils literal notranslate"><span class="pre">beale_function()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.booth_function"><code class="docutils literal notranslate"><span class="pre">booth_function()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.bukin_function"><code class="docutils literal notranslate"><span class="pre">bukin_function()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.cross_in_tray_function"><code class="docutils literal notranslate"><span class="pre">cross_in_tray_function()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.easom_function"><code class="docutils literal notranslate"><span class="pre">easom_function()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.eggholder"><code class="docutils literal notranslate"><span class="pre">eggholder()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.goldstein_price_function"><code class="docutils literal notranslate"><span class="pre">goldstein_price_function()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.himmelblaus"><code class="docutils literal notranslate"><span class="pre">himmelblaus()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.holder_table"><code class="docutils literal notranslate"><span class="pre">holder_table()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.levi_function"><code class="docutils literal notranslate"><span class="pre">levi_function()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.matyas_function"><code class="docutils literal notranslate"><span class="pre">matyas_function()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.mccormick"><code class="docutils literal notranslate"><span class="pre">mccormick()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.prueba"><code class="docutils literal notranslate"><span class="pre">prueba()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.schaffer_function_n2"><code class="docutils literal notranslate"><span class="pre">schaffer_function_n2()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.schaffer_function_n4"><code class="docutils literal notranslate"><span class="pre">schaffer_function_n4()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.shekel_function"><code class="docutils literal notranslate"><span class="pre">shekel_function()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.sphere_function"><code class="docutils literal notranslate"><span class="pre">sphere_function()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.styblinski_tang_2d"><code class="docutils literal notranslate"><span class="pre">styblinski_tang_2d()</span></code></a></li>
+<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.threehump_camel_function"><code class="docutils literal notranslate"><span class="pre">threehump_camel_function()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-FuncionesPrueba.Multivariables">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Proyecto de optimización</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">FuncionesPrueba.Multivariables package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/rst/FuncionesPrueba.Multivariables.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
   <section id="funcionesprueba-multivariables-package">
-<h1>FuncionesPrueba.Multivariables package<a class="headerlink" href="#funcionesprueba-multivariables-package" title="Link to this heading">¶</a></h1>
+<h1>FuncionesPrueba.Multivariables package<a class="headerlink" href="#funcionesprueba-multivariables-package" title="Link to this heading"></a></h1>
 <section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
 <section id="module-FuncionesPrueba.Multivariables.multi">
-<span id="funcionesprueba-multivariables-multi-module"></span><h2>FuncionesPrueba.Multivariables.multi module<a class="headerlink" href="#module-FuncionesPrueba.Multivariables.multi" title="Link to this heading">¶</a></h2>
+<span id="funcionesprueba-multivariables-multi-module"></span><h2>FuncionesPrueba.Multivariables.multi module<a class="headerlink" href="#module-FuncionesPrueba.Multivariables.multi" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.Rastrigin">
-<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">Rastrigin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#Rastrigin"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.Rastrigin" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">Rastrigin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#Rastrigin"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.Rastrigin" title="Link to this definition"></a></dt>
 <dd><p>Calcula la función Rastrigin, una función común de prueba en la optimización global.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
@@ -68,7 +135,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.Rosenbrock">
-<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">Rosenbrock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#Rosenbrock"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.Rosenbrock" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">Rosenbrock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#Rosenbrock"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.Rosenbrock" title="Link to this definition"></a></dt>
 <dd><p>Calcula la función Rosenbrock, una función común de prueba en la optimización global.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
@@ -93,7 +160,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.ackley_function">
-<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">ackley_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#ackley_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.ackley_function" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">ackley_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#ackley_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.ackley_function" title="Link to this definition"></a></dt>
 <dd><p>Calcula la función Ackley, una función común de prueba en la optimización global.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
@@ -118,7 +185,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.beale_function">
-<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">beale_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#beale_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.beale_function" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">beale_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#beale_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.beale_function" title="Link to this definition"></a></dt>
 <dd><p>Calcula la función Beale, que es solo para vectores de dimensión 2.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
@@ -146,7 +213,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.booth_function">
-<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">booth_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#booth_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.booth_function" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">booth_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#booth_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.booth_function" title="Link to this definition"></a></dt>
 <dd><p>Calcula la función Booth, que es solo para vectores de dimensión 2.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
@@ -174,7 +241,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.bukin_function">
-<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">bukin_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#bukin_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.bukin_function" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">bukin_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#bukin_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.bukin_function" title="Link to this definition"></a></dt>
 <dd><p>Calcula la función Bukin, que es solo para vectores de dimensión 2.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
@@ -202,7 +269,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.cross_in_tray_function">
-<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">cross_in_tray_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#cross_in_tray_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.cross_in_tray_function" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">cross_in_tray_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#cross_in_tray_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.cross_in_tray_function" title="Link to this definition"></a></dt>
 <dd><p>Calcula la función Cross-in-Tray, que es solo para vectores de dimensión 2.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
@@ -230,7 +297,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.easom_function">
-<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">easom_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#easom_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.easom_function" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">easom_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#easom_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.easom_function" title="Link to this definition"></a></dt>
 <dd><p>Calcula la función Easom, que es solo para vectores de dimensión 2.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
@@ -258,7 +325,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.eggholder">
-<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">eggholder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#eggholder"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.eggholder" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">eggholder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#eggholder"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.eggholder" title="Link to this definition"></a></dt>
 <dd><p>Calcula la función Eggholder, que es solo para vectores de dimensión 2.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
@@ -286,7 +353,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.goldstein_price_function">
-<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">goldstein_price_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#goldstein_price_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.goldstein_price_function" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">goldstein_price_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#goldstein_price_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.goldstein_price_function" title="Link to this definition"></a></dt>
 <dd><p>Calcula la función Goldstein-Price, que es solo para vectores de dimensión 2.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
@@ -314,7 +381,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.himmelblaus">
-<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">himmelblaus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#himmelblaus"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.himmelblaus" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">himmelblaus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#himmelblaus"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.himmelblaus" title="Link to this definition"></a></dt>
 <dd><p>Calcula la función Himmelblau, que es solo para vectores de dimensión 2.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
@@ -342,7 +409,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.holder_table">
-<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">holder_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#holder_table"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.holder_table" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">holder_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#holder_table"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.holder_table" title="Link to this definition"></a></dt>
 <dd><p>Calcula la función Holder Table, que es solo para vectores de dimensión 2.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
@@ -370,7 +437,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.levi_function">
-<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">levi_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#levi_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.levi_function" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">levi_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#levi_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.levi_function" title="Link to this definition"></a></dt>
 <dd><p>Calcula la función Levi, que es solo para vectores de dimensión 2.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
@@ -398,7 +465,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.matyas_function">
-<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">matyas_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#matyas_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.matyas_function" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">matyas_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#matyas_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.matyas_function" title="Link to this definition"></a></dt>
 <dd><p>Calcula la función Matyas, que es solo para vectores de dimensión 2.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
@@ -426,7 +493,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.mccormick">
-<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">mccormick</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#mccormick"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.mccormick" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">mccormick</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#mccormick"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.mccormick" title="Link to this definition"></a></dt>
 <dd><p>Calcula la función McCormick, que es solo para vectores de dimensión 2.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
@@ -454,7 +521,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.prueba">
-<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">prueba</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#prueba"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.prueba" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">prueba</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#prueba"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.prueba" title="Link to this definition"></a></dt>
 <dd><p>Calcula la suma de los cuadrados de los elementos de x.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
@@ -479,7 +546,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.schaffer_function_n2">
-<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">schaffer_function_n2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#schaffer_function_n2"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.schaffer_function_n2" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">schaffer_function_n2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#schaffer_function_n2"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.schaffer_function_n2" title="Link to this definition"></a></dt>
 <dd><p>Calcula la función Schaffer N. 2, que es solo para vectores de dimensión 2.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
@@ -507,7 +574,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.schaffer_function_n4">
-<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">schaffer_function_n4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#schaffer_function_n4"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.schaffer_function_n4" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">schaffer_function_n4</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#schaffer_function_n4"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.schaffer_function_n4" title="Link to this definition"></a></dt>
 <dd><p>Calcula la función Schaffer N. 4, que es solo para vectores de dimensión 2.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
@@ -535,7 +602,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.shekel_function">
-<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">shekel_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#shekel_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.shekel_function" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">shekel_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#shekel_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.shekel_function" title="Link to this definition"></a></dt>
 <dd><p>Calcula la función Shekel, que es solo para vectores de dimensión 2.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
@@ -569,7 +636,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.sphere_function">
-<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">sphere_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#sphere_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.sphere_function" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">sphere_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#sphere_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.sphere_function" title="Link to this definition"></a></dt>
 <dd><p>Calcula la función esfera, que es la suma de los cuadrados de los elementos de x.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
@@ -594,7 +661,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.styblinski_tang_2d">
-<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">styblinski_tang_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#styblinski_tang_2d"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.styblinski_tang_2d" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">styblinski_tang_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#styblinski_tang_2d"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.styblinski_tang_2d" title="Link to this definition"></a></dt>
 <dd><p>Calcula la función Styblinski-Tang, que es solo para vectores de dimensión 2.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
@@ -622,7 +689,7 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="FuncionesPrueba.Multivariables.multi.threehump_camel_function">
-<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">threehump_camel_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#threehump_camel_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.threehump_camel_function" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">FuncionesPrueba.Multivariables.multi.</span></span><span class="sig-name descname"><span class="pre">threehump_camel_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/FuncionesPrueba/Multivariables/multi.html#threehump_camel_function"><span class="viewcode-link"><span class="pre">[fuente]</span></span></a><a class="headerlink" href="#FuncionesPrueba.Multivariables.multi.threehump_camel_function" title="Link to this definition"></a></dt>
 <dd><p>Calcula la función Three-hump Camel, que es solo para vectores de dimensión 2.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Ejemplo<span class="colon">:</span></dt>
@@ -650,90 +717,36 @@
 
 </section>
 <section id="module-FuncionesPrueba.Multivariables">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-FuncionesPrueba.Multivariables" title="Link to this heading">¶</a></h2>
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-FuncionesPrueba.Multivariables" title="Link to this heading"></a></h2>
 </section>
 </section>
 
 
-            <div class="clearer"></div>
+           </div>
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="../index.html">Tabla de contenido</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">FuncionesPrueba.Multivariables package</a><ul>
-<li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-FuncionesPrueba.Multivariables.multi">FuncionesPrueba.Multivariables.multi module</a><ul>
-<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.Rastrigin"><code class="docutils literal notranslate"><span class="pre">Rastrigin()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.Rosenbrock"><code class="docutils literal notranslate"><span class="pre">Rosenbrock()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.ackley_function"><code class="docutils literal notranslate"><span class="pre">ackley_function()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.beale_function"><code class="docutils literal notranslate"><span class="pre">beale_function()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.booth_function"><code class="docutils literal notranslate"><span class="pre">booth_function()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.bukin_function"><code class="docutils literal notranslate"><span class="pre">bukin_function()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.cross_in_tray_function"><code class="docutils literal notranslate"><span class="pre">cross_in_tray_function()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.easom_function"><code class="docutils literal notranslate"><span class="pre">easom_function()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.eggholder"><code class="docutils literal notranslate"><span class="pre">eggholder()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.goldstein_price_function"><code class="docutils literal notranslate"><span class="pre">goldstein_price_function()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.himmelblaus"><code class="docutils literal notranslate"><span class="pre">himmelblaus()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.holder_table"><code class="docutils literal notranslate"><span class="pre">holder_table()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.levi_function"><code class="docutils literal notranslate"><span class="pre">levi_function()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.matyas_function"><code class="docutils literal notranslate"><span class="pre">matyas_function()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.mccormick"><code class="docutils literal notranslate"><span class="pre">mccormick()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.prueba"><code class="docutils literal notranslate"><span class="pre">prueba()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.schaffer_function_n2"><code class="docutils literal notranslate"><span class="pre">schaffer_function_n2()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.schaffer_function_n4"><code class="docutils literal notranslate"><span class="pre">schaffer_function_n4()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.shekel_function"><code class="docutils literal notranslate"><span class="pre">shekel_function()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.sphere_function"><code class="docutils literal notranslate"><span class="pre">sphere_function()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.styblinski_tang_2d"><code class="docutils literal notranslate"><span class="pre">styblinski_tang_2d()</span></code></a></li>
-<li><a class="reference internal" href="#FuncionesPrueba.Multivariables.multi.threehump_camel_function"><code class="docutils literal notranslate"><span class="pre">threehump_camel_function()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-FuncionesPrueba.Multivariables">Module contents</a></li>
-</ul>
-</li>
-</ul>
+          <footer>
 
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Derechos de autor 2024, Isabella Jimenez Bravo.</p>
   </div>
-  <div role="note" aria-label="source link">
-    <h3>Esta página</h3>
-    <ul class="this-page-menu">
-      <li><a href="../_sources/rst/FuncionesPrueba.Multivariables.rst.txt"
-            rel="nofollow">Mostrar el código</a></li>
-    </ul>
-   </div>
-<search id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Búsqueda rápida</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Ir a" />
-    </form>
-    </div>
-</search>
-<script>document.getElementById('searchbox').style.display = "block"</script>
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navegación</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../genindex.html" title="Índice General"
-             >índice</a></li>
-        <li class="right" >
-          <a href="../py-modindex.html" title="Índice de Módulos Python"
-             >módulos</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">documentación de Proyecto de optimización - 0.0.1</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">FuncionesPrueba.Multivariables package</a></li> 
-      </ul>
-    </div>
-    <div class="footer" role="contentinfo">
-    &#169; Copyright 2024, Isabella Jimenez Bravo.
-      Creado usando <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
-    </div>
-  </body>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>
