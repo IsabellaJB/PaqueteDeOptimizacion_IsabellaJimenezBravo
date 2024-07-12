@@ -35,7 +35,7 @@ El paquete está organizado en dos módulos principales:
 
 Puedes instalar el paquete utilizando pip:
 
-```pip install paquete-ejemplo```
+```pip install paqueteoptimizacion-isabella==0.0.1```
 
 
 Para más detalles, visita el [paqueteoptimizacion-isabella en PyPI](https://pypi.org/project/paqueteoptimizacion-isabella/0.0.1/).
