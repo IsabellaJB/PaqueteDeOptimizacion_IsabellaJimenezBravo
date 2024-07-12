@@ -1,24 +1,20 @@
+
+
+
 version: 2
 
-# Set the OS, Python version and other tools you might need
+
+
+
 build:
   os: ubuntu-22.04
   tools:
     python: "3.11"
-    # You can also specify other tool versions:
-    # nodejs: "20"
-    # rust: "1.70"
-    # golang: "1.20"
+    
 
-# Build documentation with Sphinx
 sphinx:
-  configuration: conf.py  # Ajusta esta ruta según donde tengas conf.py
+  configuration: conf.py  
 
-# Opcionalmente construye tus documentos en otros formatos como PDF y ePub
 formats:
   - pdf
 
-# Declara las dependencias de Python necesarias para construir tu documentación
-# python:
-#   install:
-#     - requirements: requirements.txt  # Ajusta si tienes un archivo requirements.txt
