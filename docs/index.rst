@@ -11,6 +11,9 @@ Welcome to Paquete de Optimizacion's documentation!
    :caption: Contents:
 
    modules
+   paqueteoptimizacion_isabella.FuncionesMultivariables
+   paqueteoptimizacion_isabella.FuncionesPrueba
+   paqueteoptimizacion_isabella.FuncionesUnaVariable
 
 Indices and tables
 ==================
