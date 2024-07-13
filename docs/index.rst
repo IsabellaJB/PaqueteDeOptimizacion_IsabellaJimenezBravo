@@ -10,6 +10,8 @@ Bienvenido a la documentación del paquete del proyecto de optimización!
    :maxdepth: 2
    :caption: Contents:
 
+   modules
+
 
 
 Indices and tables
