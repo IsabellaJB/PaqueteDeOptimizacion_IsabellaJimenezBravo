@@ -124,13 +124,20 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">paqueteoptimizacion_isabella.FuncionesMultivariables.Gradiente.Newton</span> <span class="kn">import</span> <span class="n">newton</span>
 <span class="kn">from</span> <span class="nn">paqueteoptimizacion_isabella.FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch</span> <span class="kn">import</span> <span class="n">busqueda_dorada</span>
+<span class="kn">from</span> <span class="nn">paqueteoptimizacion_isabella.FuncionesUnaVariable.EliminacionDeRegiones.FibonacciSearch</span> <span class="kn">import</span> <span class="n">fibonacci_search</span>
+<span class="kn">from</span> <span class="nn">paqueteoptimizacion_isabella.FuncionesUnaVariable.EliminacionDeRegiones.IntervalHalving</span> <span class="kn">import</span> <span class="n">interval_method</span>
 <span class="kn">from</span> <span class="nn">paqueteoptimizacion_isabella.FuncionesPrueba.Multivariables.multi</span> <span class="kn">import</span> <span class="n">himmelblaus</span>
 
 <span class="n">x0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
 
-<span class="n">solucion_golden</span> <span class="o">=</span> <span class="n">newton</span><span class="p">(</span><span class="n">himmelblaus</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">busqueda_dorada</span><span class="p">)</span>
+<span class="n">solucion_1</span> <span class="o">=</span> <span class="n">newton</span><span class="p">(</span><span class="n">himmelblaus</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">busqueda_dorada</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Resultado G: </span><span class="si">{</span><span class="n">solucion_1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Resultado Golden: </span><span class="si">{</span><span class="n">solucion_golden</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">solucion_2</span> <span class="o">=</span> <span class="n">newton</span><span class="p">(</span><span class="n">himmelblaus</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">fibonacci_search</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Resultado F: </span><span class="si">{</span><span class="n">solucion_2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">solucion_3</span> <span class="o">=</span> <span class="n">newton</span><span class="p">(</span><span class="n">himmelblaus</span><span class="p">,</span><span class="n">x0</span><span class="p">,</span><span class="n">interval_method</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Resultado I: </span><span class="si">{</span><span class="n">solucion_3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>

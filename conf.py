@@ -43,3 +43,10 @@ extensions = [
 
 # html_static_path = ['_static']
 # html_output_path = os.getenv('READTHEDOCS_OUTPUT', default='_build') + '/html'
+if os.environ.get('READTHEDOCS'):
+    html_output_path = os.path.join(os.environ['READTHEDOCS_OUTPUT'], 'html')
+else:
+    html_output_path = os.path.abspath('_build/html')
+
+# Añade esta línea para especificar el directorio de salida
+html_output_path = os.path.join(os.environ.get('READTHEDOCS_OUTPUT', ''), 'html')

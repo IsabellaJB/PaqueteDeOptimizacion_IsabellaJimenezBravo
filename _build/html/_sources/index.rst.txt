@@ -60,15 +60,23 @@ Ejemplo de uso
 
 .. code-block:: python
 
-    import numpy as np
-    from paqueteoptimizacion_isabella.FuncionesMultivariables.Gradiente.Newton import newton
-    from paqueteoptimizacion_isabella.FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch import busqueda_dorada
-    from paqueteoptimizacion_isabella.FuncionesPrueba.Multivariables.multi import himmelblaus
+   import numpy as np
+   from paqueteoptimizacion_isabella.FuncionesMultivariables.Gradiente.Newton import newton
+   from paqueteoptimizacion_isabella.FuncionesUnaVariable.EliminacionDeRegiones.GoldenSectionSearch import busqueda_dorada
+   from paqueteoptimizacion_isabella.FuncionesUnaVariable.EliminacionDeRegiones.FibonacciSearch import fibonacci_search
+   from paqueteoptimizacion_isabella.FuncionesUnaVariable.EliminacionDeRegiones.IntervalHalving import interval_method
+   from paqueteoptimizacion_isabella.FuncionesPrueba.Multivariables.multi import himmelblaus
 
-    x0 = np.array([2, 1])
+   x0 = np.array([2, 1])
 
-    solucion_golden = newton(himmelblaus, x0, busqueda_dorada)
+   solucion_1 = newton(himmelblaus,x0,busqueda_dorada)
+   print(f"Resultado G: {solucion_1}")
 
-    print(f"Resultado Golden: {solucion_golden}")
+   solucion_2 = newton(himmelblaus,x0,fibonacci_search)
+   print(f"Resultado F: {solucion_2}")
+
+   solucion_3 = newton(himmelblaus,x0,interval_method)
+   print(f"Resultado I: {solucion_3}")
+
 
 
