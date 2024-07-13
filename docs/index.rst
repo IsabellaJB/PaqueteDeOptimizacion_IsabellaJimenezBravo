@@ -1,16 +1,17 @@
-.. Paquete - Proyecto de Optimizacion documentation master file, created by
-   sphinx-quickstart on Sat Jul 13 12:30:02 2024.
+.. Paquete de Optimizacion - Proyecto Final documentation master file, created by
+   sphinx-quickstart on Sat Jul 13 12:45:02 2024.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Paquete - Proyecto de Optimizacion's documentation!
-==============================================================
+Welcome to Paquete de Optimizacion - Proyecto Final's documentation!
+====================================================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-
+   modules
+   
 
 Indices and tables
 ==================

@@ -1,9 +1,7 @@
-source
-======
+paqueteoptimizacion_isabella
+============================
 
 .. toctree::
    :maxdepth: 4
 
-   FuncionesMultivariables
-   FuncionesPrueba
-   FuncionesUnaVariable
+   paqueteoptimizacion_isabella

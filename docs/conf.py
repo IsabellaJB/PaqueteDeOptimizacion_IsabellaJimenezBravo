@@ -8,13 +8,12 @@
 
 import os
 import sys
-sys.path.insert(0,os.path.abspath('..'))
+sys.path.insert(0, os.path.abspath(".."))
 
-
-project = 'Paquete - Proyecto de Optimizacion'
+project = 'Paquete de Optimizacion - Proyecto Final'
 copyright = '2024, Isabella Jimenez Bravo'
 author = 'Isabella Jimenez Bravo'
-release = '0.0.1'
+release = '1.0.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -23,8 +22,9 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
     'sphinx.ext.viewcode',
-    'sphinx.ext.todo',
+    'sphinx.ext.todo'
 ]
+
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
