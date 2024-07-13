@@ -10,8 +10,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.abspath('.'))
-sys.path.append(os.path.abspath('../../paqueteoptimizacion_isabella'))
-
+sys.path.append(os.path.abspath('../paqueteoptimizacion_isabella'))
 
 
 project = 'Proyecto - Paquete de optimizacion'
