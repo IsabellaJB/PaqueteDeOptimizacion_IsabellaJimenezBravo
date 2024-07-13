@@ -3,7 +3,7 @@ import sys
 
 # Añade el directorio del paquete al path
 sys.path.insert(0, os.path.abspath('../../'))
-sys.path.append(os.path.abspath('../../paqueteoptimizacion_isabella'))
+# sys.path.append(os.path.abspath('../../paqueteoptimizacion_isabella'))
 
 # -- Project information -----------------------------------------------------
 project = 'Proyecto de optimización'
