@@ -13,7 +13,7 @@ Bienvenido a la documentación del paquete del proyecto de optimización!
 
 
 Indices and tables
---------------------
+=======================================================================
 
 * :ref:`genindex`
 * :ref:`modindex`
@@ -21,14 +21,14 @@ Indices and tables
 
 
 Introducción
-------------------
+=======================================================================
 
 Bienvenidos a la documentación oficial del paquete **paqueteoptimizacion_isabella**. Este paquete ha sido desarrollado para proporcionar una colección de funciones de optimización tanto para problemas de una variable como de múltiples variables.
 
 
 
 Estructura del Paquete
-------------------------
+=======================================================================
 
 Este paquete está organizado en dos módulos principales:
 
@@ -45,8 +45,7 @@ Este paquete está organizado en dos módulos principales:
 
 
 Instalación
--------------
-
+=======================================================================
 Para instalar el paquete, puedes usar el siguiente comando:
 
 ``pip install paqueteoptimizacion-isabella==0.0.1``
@@ -57,7 +56,7 @@ https://pypi.org/project/paqueteoptimizacion-isabella/0.0.1/
 
 
 Ejemplo de uso
---------------
+=======================================================================
 
 .. code-block:: python
 
