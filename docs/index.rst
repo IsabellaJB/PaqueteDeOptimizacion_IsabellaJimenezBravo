@@ -10,7 +10,7 @@ Welcome to Proyecto - Paquete de optimizacion's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+   modules
 
 Indices and tables
 ==================
@@ -18,3 +18,4 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
