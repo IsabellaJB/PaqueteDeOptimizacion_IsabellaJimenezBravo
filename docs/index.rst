@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Paquete de Optimizacion's documentation!
-===================================================
+Bienvenidos a mi Paquete de Optimizacion - Isabella Jimenez Bravo!
+===================================================================
 
 .. toctree::
    :maxdepth: 2
@@ -15,12 +15,12 @@ Welcome to Paquete de Optimizacion's documentation!
    paqueteoptimizacion_isabella.FuncionesPrueba
    paqueteoptimizacion_isabella.FuncionesUnaVariable
 
-Indices and tables
-==================
+.. Indices and tables
+.. ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
 
 
 Introducción
