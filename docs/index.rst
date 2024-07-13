@@ -33,7 +33,7 @@ Bienvenidos a la documentación oficial del paquete **paqueteoptimizacion_isabel
 Estructura del Paquete
 =======================================================================
 
-Este paquete está organizado en dos módulos principales:
+Este paquete está organizado en tres módulos principales:
 
 1. **FuncionesMultivariables**: Contiene métodos de optimización para problemas de múltiples variables.
    
@@ -45,6 +45,7 @@ Este paquete está organizado en dos módulos principales:
    - **Basados en la Derivada**: Métodos que utilizan derivadas de la función objetivo.
    - **Eliminación de Regiones**: Métodos que reducen el espacio de búsqueda iterativamente.
 
+3. **FuncionesPrueba**: Contiene funciones para probarlas con los metodos anteriores.
 
 
 Instalación
