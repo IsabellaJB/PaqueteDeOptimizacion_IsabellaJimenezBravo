@@ -10,17 +10,17 @@ Bienvenidos a mi Paquete de Optimizacion - Isabella Jimenez Bravo!
    :maxdepth: 2
    :caption: Contents:
 
-   modules
-   paqueteoptimizacion_isabella.FuncionesMultivariables
-   paqueteoptimizacion_isabella.FuncionesPrueba
-   paqueteoptimizacion_isabella.FuncionesUnaVariable
+   pages/modules
+   pages/paqueteoptimizacion_isabella.FuncionesMultivariables
+   pages/paqueteoptimizacion_isabella.FuncionesPrueba
+   pages/paqueteoptimizacion_isabella.FuncionesUnaVariable
 
-.. Indices and tables
-.. ==================
+Indices and tables
+==================
 
-.. * :ref:`genindex`
-.. * :ref:`modindex`
-.. * :ref:`search`
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
 
 
 Introducción
